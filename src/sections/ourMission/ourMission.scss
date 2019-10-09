@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.our-mission {
+    overflow-x: hidden;
+    position: relative;
+    background: -webkit-linear-gradient(top, $black, $purple);
+    min-height: 200vh;
+}
+
+.our-mission__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.our-mission__title {
+    letter-spacing: 0.15em;
+    padding: 190px 0 80px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.our-mission__paragraph {
+    font-size: 32px;
+}
+
+.our-mission__title, .our-mission__paragraph {
+    color: $white;
+    text-align: center;
+}
+
+.our-mission__svg-group {
+    position: relative;
+}
+
+.light-bulb {
+    &:nth-child(1) {
+        width: 135px;
+        height: 135px;
+    }
+    &:nth-child(2) {
+        top: 100px;
+        left: 135px;
+        width: 87px;
+        height: 87px;
+        transform: rotate(40deg);
+    }
+    background-image: url('../../images/svg/lightbulb.svg');
+}
+
+.paper-plane {
+    top: 50px;
+    left: 30%;
+    width: 81px;
+    height: 30px;
+    background-image: url('../../images/svg/paperplane.svg');
+}
+
+.planet {
+    right: 0;
+    width: 30vw;
+    height: 30vw;
+    max-width: 295px;
+    max-height: 295px;
+    background-image: url('../../images/svg/planet.svg');
+}
+
+.our-mission__svg {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
