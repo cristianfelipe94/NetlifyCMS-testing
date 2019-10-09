@@ -36,6 +36,10 @@ export default () => {
                     <div className="our-mission__svg check"/>
                     <div className="our-mission__svg check"/>
                 </div>
+                <div className="our-mission__logo"/>
+                <div className="our-mission__cta">
+                    
+                </div>
             </Layout>
         </section>
     );
