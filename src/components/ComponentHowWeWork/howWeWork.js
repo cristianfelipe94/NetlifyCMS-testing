@@ -11,7 +11,7 @@ export default ({ title, paragraph, button, id, src, reverse = true }) => {
         </div>
         ,
         <div className="container__animation" id={id}>
-            <img src={src}/>
+            <img className={id} src={src}/>
         </div>
     ]
     return (
