@@ -3,60 +3,57 @@
 @import'./variables.scss';
 
 
-body{
+body {
     font-family: 'poppins', Arial, Helvetica, sans-serif;
 }
 
-h1{
-    color: $white; 
-    font-size: 45px;
+h1 {
+    color: $white;
     font-weight: bold;
+    font-size: 30px;
 
-    @media (max-with: $tablet) {
+    @media (min-with: $desktop) {
+        font-size: 45px;
+    }
+
+    @media (min-with: $tablet) {
         font-size: 35px;
     }
+}
 
-    @media (max-with: $mobile) {
+h2 {
+    color: $purple;
+    font-weight: bold;
+    font-size: 25px;
+
+    @media (min-with: $desktop) {
+        font-size: 40px;
+    }
+}
+
+h3 {
+    color: $pink;
+    font-weight: bold;
+    font-size: 17px;
+
+    @media (min-with: $desktop) {
         font-size: 30px;
     }
-}
 
-h2{
-    color: $purple; 
-    font-size: 40px;
-    font-weight: bold;
-
-    @media (max-with: $tablet) {
-        font-size: 25px; 
-    }
-
-    @media (max-with: $mobile) {
-        font-size: 25px;
-    }
-}
-
-h3{
-    color: $pink; 
-    font-size: 30px;
-    font-weight: bold;
-
-    @media (max-with: $tablet) {
+    @media (min-with: $tablet) {
         font-size: 20px;
     }
-
-    @media (max-with: $mobile) {
-        font-size: 17px;
-    }
 }
 
-h4{
-    color: $black; 
-    font-size: 25px;
-    @media (max-with: $tablet) {
-        font-size: 18px;
+h4 {
+    color: $black;
+    font-size: 15px;
+
+    @media (min-with: $desktop) {
+        font-size: 25px;
     }
 
-    @media (max-with: $mobile) {
-        font-size: 15px;
+    @media (min-with: $tablet) {
+        font-size: 18px;
     }
-} 
+}
