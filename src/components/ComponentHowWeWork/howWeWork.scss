@@ -1,0 +1,33 @@
+@import url('../../styles/variables.scss');
+
+.container{
+    display: flex;
+    padding-top: 90px;
+    place-content: center;
+    
+}
+
+.container__info{
+    height: 334px;
+    padding-right: 160px;
+    width: 633.55px;
+    & :nth-child(-n + 2){ 
+        padding-bottom: 50px;
+    }
+}
+
+.info__tile{
+    width: 580px;
+}
+
+.info__paragraph{
+    font-size: 27px;
+}
+
+.info__button{
+
+}
+
+.container__animation{
+
+}
