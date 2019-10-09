@@ -4,10 +4,12 @@ import SEO from "../components/seo"
 import "../styles/global.scss"
 
 import OurMission from "../sections/ourMission/ourMission";
+import Header from "../sections/Header/header";
 
 const IndexPage = () => (
   <div>
     <SEO title="Home" />
+    <Header/>
     <OurMission/>
   </div>
 )
