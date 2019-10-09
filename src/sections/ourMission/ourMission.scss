@@ -4,7 +4,6 @@
     overflow-x: hidden;
     position: relative;
     background: -webkit-linear-gradient(top, $black, $purple);
-    min-height: 200vh;
 }
 
 .our-mission__canvas {
@@ -22,6 +21,7 @@
 
 .our-mission__paragraph {
     font-size: 32px;
+    margin-bottom: 80px;
 }
 
 .our-mission__title, .our-mission__paragraph {
@@ -31,6 +31,11 @@
 
 .our-mission__svg-group {
     position: relative;
+    padding-bottom: 300px;
+}
+
+.svg-group--spacing {
+    margin-bottom: 300px;
 }
 
 .light-bulb {
@@ -63,6 +68,48 @@
     max-width: 295px;
     max-height: 295px;
     background-image: url('../../images/svg/planet.svg');
+}
+
+.check {
+    width: 0;
+    height: 0;
+    &:nth-child(1) {
+        transform: rotate(-20deg);
+        padding: 30px;
+        top: 50px;
+        left: 0%;
+    }
+    &:nth-child(2) {
+        transform: rotate(18deg);
+        padding: 37.5px;
+        top: 75px;
+        right: 0%;
+    }
+    &:nth-child(3) {
+        transform: rotate(-17deg);
+        padding: 35px;
+        top: 150px;
+        left: 15%;
+    }
+    &:nth-child(4) {
+        transform: rotate(15deg);
+        padding: 32.5px;
+        top: 150px;
+        right: 20%;
+    }
+    &:nth-child(5) {
+        transform: rotate(-21deg);
+        padding: 30px;
+        top: 75px;
+        left: 32.5%;
+    }
+    &:nth-child(6) {
+        transform: rotate(25deg);
+        padding: 27.5px;
+        top: 25px;
+        right: 32.5%;
+    }
+    background-image: url('../../images/svg/check.svg');
 }
 
 .our-mission__svg {
