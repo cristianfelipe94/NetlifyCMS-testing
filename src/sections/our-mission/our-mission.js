@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ourMissionCanvas from './our-mission-canvas';
+import ourMissionCanvas from '../../utils/our-mission-canvas';
 import Layout from "../../components/layout/layout"
 import './our-mission.scss';
 
