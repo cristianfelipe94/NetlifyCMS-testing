@@ -1,5 +1,5 @@
 import React from "react";
-import "./how-we-work.scss";
+import "./info-card.scss";
 
 export default ({ title, paragraph, button, id, src, reverse = true }) => {
 
