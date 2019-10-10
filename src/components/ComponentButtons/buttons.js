@@ -2,14 +2,31 @@ import React from 'react';
 
 import './buttons.scss';
 
-const Buttons = {
-    SubscribeBtn: () => <button className= {'layout__btn--standar layout__btn--subscribe'}>Subscribirse</button>,
-    WhiteComunicateBtn: () => <button className= {'layout__btn--standar layout__btn--comunicate-white'}>Crea un comunicado</button>,
-    PinkComunicateBtn: () => <button className= {'layout__btn--standar layout__btn--comunicate-pink'}>Crea un comunicado</button>,
-    BigComunicateBtn: () => <button className= {'layout__btn--standar layout__btn--comunicate-big'}>Crea tu comunicado</button>,
-    BasicPackBtn: () => <button className= {'layout__btn--standar layout__btn--package'}>Obtener Básico</button>,
-    StandarPackBtn: () => <button className= {'layout__btn--standar layout__btn--package'}>Obtener Estandar</button>,
-    PremiumPackBtn: () => <button className= {'layout__btn--standar layout__btn--package'}>Obtener Premium</button>,
+function Button ({title = 'Crea un comunicado', group= 'secondary', type= 'button'}) {
+
+    const btnType = group;
+
+    const btnStyle = {
+        main: 'btn btn--subscribe',
+        secondary: 'btn btn--comunicate-white',
+        third: 'btn btn--comunicate-pink',
+        fourth: 'btn btn--package',
+        fifth: 'btn btn--comunicate-big'
+    }
+
+    const btnAction = {
+        main: () => {console.log('Main btn was clicked')},
+        secondary: () => {console.log('Secondary btn was clicked')},
+        third: () => {console.log('Third btn was clicked')},
+        fourth: () => {console.log('Fourth btn was clicked')},
+        fifth: () => {console.log('Fifth btn was clicked')}
+    }
+    
+    return (
+        <button className= {btnStyle[btnType]} type= {type} onClick= {btnAction[btnType]}>
+            {title}
+        </button>
+    );
 }
 
-export default Buttons;
+export default Button;
