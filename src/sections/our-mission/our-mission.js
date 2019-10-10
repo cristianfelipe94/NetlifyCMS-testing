@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import ourMissionCanvas from './ourMission-canvas';
+import ourMissionCanvas from './our-mission-canvas';
 import Layout from "../../components/layout/layout"
-import './ourMission.scss';
+import './our-mission.scss';
 
 export default () => {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./howWeWork.scss";
+import "./how-we-work.scss";
 
 export default ({ title, paragraph, button, id, src, reverse = true }) => {
 
