@@ -1,0 +1,102 @@
+@import'../../styles/reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import'../../styles/variables.scss';
+
+.layout__btn--standar {
+    background: $white;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.layout__btn--subscribe {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+    color: $purple;
+    font-size: 20px;
+    height: 60px;
+    letter-spacing: 0.2em;
+    padding: 20px 10px;
+    text-align: center;
+    transition: 0.5s;
+    width: 268px;
+}
+
+.layout__btn--subscribe:hover {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+}
+
+.layout__btn--comunicate-white {    
+    align-items: end;
+    background: $white;
+    color: $pink;
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    margin: 0 auto;
+    padding: 20px 0px;
+    width: 331px;
+}
+
+.layout__btn--comunicate-white::after {
+    content: url(../../images/svg/arrow-pink.svg);
+    display: inline-block;
+}
+
+.layout__btn--comunicate-pink {
+    align-items: end;
+    background: $pink;
+    color: $white;
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    margin: 0 auto;
+    padding: 20px 0px;
+    width: 331px;
+}
+
+.layout__btn--comunicate-pink::after {
+    content: url(../../images/svg/arrow-white.svg);
+    display: inline-block;
+}
+
+.layout__btn--comunicate-big {
+    background: $white;
+    box-shadow: 0px 40px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    color: $purple;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 25px;
+    transition: 0.5s;
+    width: 500px;
+}
+
+.layout__btn--comunicate-big:hover {
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+
+.layout__btn--package {
+    background: $black;
+    color: $white;
+    font-size: 17px;
+    letter-spacing: 0.15em;
+    line-height: 25px;
+    padding: 15px;
+    text-align: center;
+    width: 268px;
+}
