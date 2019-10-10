@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/layout/layout'
-import HowWeWork from '../../components/ComponentHowWeWork/howWeWork'
+import HowWeWork from '../../components/how-we-work/howWeWork'
 
 export default () => {
     return (
