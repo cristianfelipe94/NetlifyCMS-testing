@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 @import '../../styles/animations.scss';
 
+$paper-plane-top: 330px;
+
 .check {
     background-image: url('../../images/svg/check.svg');
     height: 0;
@@ -85,7 +87,17 @@
     background-size: contain;
     height: 500px;
     margin-top: -200px;
+    margin-bottom: -70vw;
     width: 100%;
+    @media (min-width: 515px) { // this needs to be really specific 
+        margin-bottom: -45vw;
+    }
+    @media (min-width: 625px) { // this needs to be really specific 
+        margin-bottom: -30vw;
+    }
+    @media (min-width: 835px) { // this needs to be really specific 
+        margin-bottom: -227px;
+    }
 }
 
 .our-mission__paragraph {
@@ -141,6 +153,7 @@
     position: relative;
     width: 100%;
     height: 400px;
+    padding-top: 150px;
     display: grid;
     place-content: center;
     background: #fff2;
@@ -150,7 +163,7 @@
     background-image: url('../../images/svg/paperplane.svg');
     height: 30px;
     left: calc(20% - 81px);
-    top: 180px;
+    top: $paper-plane-top;
     width: 81px;
     animation: wave 4s ease-in-out infinite;
 }
@@ -164,7 +177,7 @@
     background-size: contain;
     height: 40px;
     left: calc(20% - 81px);
-    top: 230px;
+    top: $paper-plane-top + 50px;
     width: 81px;
     transform: rotateX(180deg);
     opacity: 0.5;
