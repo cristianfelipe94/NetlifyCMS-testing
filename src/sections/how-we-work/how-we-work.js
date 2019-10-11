@@ -13,6 +13,7 @@ export default () => {
                     src = "comunicado.svg"
                 />
                 <InfoCard 
+                    modifier="container--reverse"
                     title="Distribución automatizada "
                     paragraph="Envíamos a medios y periodistas de acuerdo al público meta y la categoría."
                     id="media"
