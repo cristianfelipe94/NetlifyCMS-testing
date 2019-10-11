@@ -5,8 +5,11 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   padding-top: 90px;
+  padding-bottom: 90px;
+
   @media (min-width: $medium) {
     flex-direction: row;
+    align-items: center;
   }
 
   @media (min-width: $large) {
@@ -36,11 +39,6 @@
     padding-bottom: 50px;
   }
 
-  & :nth-child(1),
-  &:nth-child(3) {
-    padding-right: 160px;
-  }
-
   @media (min-width: $medium) {
     text-align: left;
   }
@@ -51,8 +49,8 @@
   }
 }
 .container--reverse {
-  flex-direction: row;
-  
+    flex-direction: column-reverse;
+
   @media (min-width: $medium) {
     flex-direction: row-reverse;
   }
