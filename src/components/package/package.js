@@ -1,17 +1,24 @@
 import React from "react";
 
-export default ({bundle = "basicBundle", price = "$60"}) => {
-    
-    const bundlesFeatures= {
-        basicBundle : [
+export default ({bundle = "basic", price = "$60"}) => {
+    const type = bundle;
+
+    const bundleName= {
+        basic : <p>Paquete básico</p>,
+        standard: <p>Paquete estandar</p>,
+        premium: <p>Paquete premium</p>
+    }
+
+    const bundleFeatures= {
+        basic : [
             <li>"Con este paquete se podrán crear comunicados.</li>,
             <li>"Capacidad de recibir consejos de los mejores comunicadores.</li>
         ],
-        standardBundle: [
+        standard: [
             <li>"Con este paquete los comunicados viajan a más comunicadores.</li>,
             <li>"Otras más."</li>
         ],
-        premiumBundle: [
+        premium: [
             <li>Con este paquete la cantidad de comunicados creados no es algo en que pensar.</li>,
             <li>"Otras más."</li>
         ]
@@ -23,13 +30,13 @@ export default ({bundle = "basicBundle", price = "$60"}) => {
                 Paquete
             </h3>
             <p>
-                {bundle}
+                {bundleName[type]}
             </p>
             <p>
                 {price}
             </p>
             <ul>
-                {bundlesFeatures[bunble]}
+                {bundleFeatures[type]}
             </ul>
             <button>
                 Obtener paquete
