@@ -1,31 +1,38 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './buttons.scss';
-
-function Button ({title = 'Crea un comunicado', render= 'secondary', type= 'button'}) {
+function Button ({title, render, type, action}) {
 
     const btnType = render;
 
     const btnStyle = {
         main: 'btn btn--primary',
-        secondary: 'btn btn--secondary-white',
-        third: 'btn btn--secondary-pink',
-        fourth: 'btn btn--package',
-        fifth: 'btn btn--secondary-big'
+        secondaryWhite: 'btn btn--secondary-white',
+        secondaryPink: 'btn btn--secondary-pink',
+        secondaryBlack: 'btn btn--secondary-black',
+        secondaryBig: 'btn btn--secondary-big',
+        default: 'btn'
     }
 
-    const btnAction = {
-        main: () => {console.log('Main btn was clicked')},
-        secondary: () => {console.log('Secondary btn was clicked')},
-        third: () => {console.log('Third btn was clicked')},
-        fourth: () => {console.log('Fourth btn was clicked')},
-        fifth: () => {console.log('Fifth btn was clicked')}
-    }
-    
     return (
-        <button className= {btnStyle[btnType]} type= {type} onClick= {btnAction[btnType]}>
+        <button className= {btnStyle[btnType]} type= {type} onClick= {action}>
             {title}
         </button>
     );
+}
+
+Button.defaultProps = {
+    title: "Botón",
+    render: "default",
+    type: "button",
+    action: () => console.log("Default function"),
+}
+
+Button.propTypes = {
+    title: PropTypes.string,
+    render: PropTypes.string,
+    type: PropTypes.string,
+    action: PropTypes.func,
 }
 
 export default Button;
