@@ -15,10 +15,11 @@ const Header = () => (
       <h1 className="header__tittle">comunicados de prensa</h1>
       <p className="header__text">De una manera más fácil, rápida y sencilla. </p>
       {/* bottom create statement */}
-      </Layout>
+    </Layout>
       
   </div>
   
 )
 
 export default Header
+  
