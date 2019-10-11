@@ -26,28 +26,30 @@ export default ({bundle = "basic", price = "$60"}) => {
     }
 
     const bundleColors= {
-        basic : "package--basic",
-        standard: "package--standard",
-        premium: "package--premium"
+        basic : "package package--basic",
+        standard: "package package--standard",
+        premium: "package package--premium"
     }
     
     return (
         <div className= {bundleColors[type]}>
-            <h3 className= "package__title">
-                Paquete
-            </h3>
-            <p className= "package__type">
-                {bundleName[type]}
-            </p>
-            <p className= "package__price">
-                {price}
-            </p>
-            <ul className= "package__features">
-                {bundleFeatures[type]}
-            </ul>
-            <button>
-                Obtener paquete
-            </button>
+            <div className= "bundleContent">
+                <h3 className= "package__title">
+                    Paquete
+                </h3>
+                <p className= "package__type">
+                    {bundleName[type]}
+                </p>
+                <p className= "package__price">
+                    {price}
+                </p>
+                <ul className= "package__features">
+                    {bundleFeatures[type]}
+                </ul>
+                <button>
+                    Obtener paquete
+                </button>
+            </div>
         </div>
     )
 }

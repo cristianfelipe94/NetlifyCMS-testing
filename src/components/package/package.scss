@@ -1,50 +1,72 @@
 @import '../../styles/variables.scss';
 
-.package__title {
-    color: #000000;
+.package {
     font-family: Poppins;
     font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    width: 33.3%;
+}
+
+.package__title {
+    color: $black;
     font-weight: bold;
     font-size: 30px;
     line-height: 45px;
     text-align: center;
-    letter-spacing: 0.15em;
 }
 
 .package__type {
-    color: #000000;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
     font-size: 25px;
     line-height: 37px;
     text-align: center;
-    letter-spacing: 0.15em;
 }
 
 .package__price {
     color: #FFFFFF;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
     font-size: 45px;
     line-height: 67px;
     text-align: center;
-    letter-spacing: 0.15em;
 }
 
 .package__features {
     color: #FFFFFF;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    letter-spacing: 0.15em;
 }
 
 .package--basic {
     background-color: $purple;
+    z-index: -1;
+    position: relative;
+}
+
+.bundleContent {
+    z-index: 1;
+}
+
+.package--basic::before {
+    content: "";
+    background-image: url(../../images/svg/package-vector.svg);
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.package--basic::after {
+    content: "aa";
+    background-image: url(../../images/svg/package-vector.svg);
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    transform: rotateX(180deg);
 }
 
 .package--standard {
