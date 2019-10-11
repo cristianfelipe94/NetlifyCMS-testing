@@ -9,7 +9,9 @@ export default () => {
                 <h2>
                     Nuestros paquetes
                 </h2>
-                <Bundle />
+                <Bundle bundle = "basic" price = "$30"/>
+                <Bundle bundle = "standard" price = "$60"/>
+                <Bundle bundle = "premium" price = "$100"/>
             </Layout>
         </section>
     );
