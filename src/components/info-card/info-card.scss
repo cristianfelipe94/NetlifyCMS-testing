@@ -1,0 +1,94 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding-top: 90px;
+  @media (min-width: $medium) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $large) {
+  }
+}
+
+.container__animation {
+  /*
+    @media (min-width: $medium) {
+        
+    }
+
+    @media (min-width: $large) {
+        
+    }*/
+}
+
+.container__info {
+  height: 326px;
+  width: 281px;
+
+  & :nth-child(-n + 2) {
+    padding-bottom: 50px;
+  }
+
+  & :nth-child(1),
+  &:nth-child(3) {
+    padding-right: 160px;
+  }
+
+  @media (min-width: $medium) {
+  }
+
+  @media (min-width: $large) {
+    height: 334px;
+    width: 580px;
+  }
+}
+
+.info__button {
+  /*@media (min-width: $medium) {
+        
+    }
+
+    @media (min-width: $large) {
+        
+    }*/
+}
+
+.info__paragraph {
+  font-size: 12px;
+
+  @media (min-width: $large) {
+    font-size: 27px;
+  }
+}
+
+.info__tile {
+  width: 100vw;
+
+  /*@media (min-width: $medium) {
+        
+    }
+
+    @media (min-width: $large) {
+        
+    }*/
+}
+
+#comunicado {
+  max-width: 71px;
+  @media (min-width: $medium) {
+    max-width: 104px;
+  }
+
+  @media (min-width: $large) {
+    max-width: 189px;
+  }
+}
+
+#media {
+}
+
+#grafica {
+}
