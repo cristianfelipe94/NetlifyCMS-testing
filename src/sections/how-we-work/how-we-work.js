@@ -16,7 +16,6 @@ export default () => {
                     title="Distribución automatizada "
                     paragraph="Envíamos a medios y periodistas de acuerdo al público meta y la categoría."
                     id="media"
-                    reverse = {false}
                     src = "media.svg" 
                 />
                 <InfoCard
