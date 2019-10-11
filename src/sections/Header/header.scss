@@ -11,9 +11,7 @@ h1,h3 {
 
 .header__tittle{
   width: 280px;
-  margin-top: 12px;
   margin-bottom: 20px;
-
 }
 
 .header__title--color-white {
@@ -25,7 +23,32 @@ h1,h3 {
   width: 220px;
 }
 
-.header__menue{
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -25px;
+  margin-bottom: 70px;
+}
+
+.menu__btn + .menu__btn {
+  margin-left: 10px;
+}
+
+.header__btn{
+  margin-top: 25px;
+}
+
+.header__logo{
   padding-top: 50px;
-  padding-bottom: 120px;
+}
+
+.header__arrow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  padding-top: 85px;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }

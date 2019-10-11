@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import ourMissionCanvas from './ourMission-canvas';
+import ourMissionCanvas from '../../utils/our-mission-canvas';
 import Layout from "../../components/layout/layout"
-import './ourMission.scss';
+import './our-mission.scss';
 
 export default () => {
 
@@ -37,9 +37,7 @@ export default () => {
                     <div className="our-mission__svg check"/>
                 </div>
                 <div className="our-mission__logo"/>
-                <div className="our-mission__cta">
-                    
-                </div>
+                <div className="our-mission__cta"/>
             </Layout>
         </section>
     );
