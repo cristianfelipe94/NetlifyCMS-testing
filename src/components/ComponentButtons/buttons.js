@@ -1,17 +1,16 @@
 import React from 'react';
-
 import './buttons.scss';
 
-function Button ({title = 'Crea un comunicado', group= 'secondary', type= 'button'}) {
+function Button ({title = 'Crea un comunicado', render= 'secondary', type= 'button'}) {
 
-    const btnType = group;
+    const btnType = render;
 
     const btnStyle = {
-        main: 'btn btn--subscribe',
-        secondary: 'btn btn--comunicate-white',
-        third: 'btn btn--comunicate-pink',
+        main: 'btn btn--primary',
+        secondary: 'btn btn--secondary-white',
+        third: 'btn btn--secondary-pink',
         fourth: 'btn btn--package',
-        fifth: 'btn btn--comunicate-big'
+        fifth: 'btn btn--secondary-big'
     }
 
     const btnAction = {
