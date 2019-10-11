@@ -180,7 +180,7 @@ $paper-plane-top: 330px;
     top: $paper-plane-top + 50px;
     width: 81px;
     transform: rotateX(180deg);
-    opacity: 0.5;
+    opacity: 0.45;
     filter: blur(3.5px);
     animation: waveBlur 4s ease-in-out infinite;
 }
