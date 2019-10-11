@@ -2,16 +2,16 @@ import React from "react"
 
 import SEO from "../components/seo"
 import "../styles/global.scss"
-import ContainerHWW from "../sections/howWeWork/containerHWW"
+import ContainerHWW from "../sections/how-we-work/how-we-work"
 
-import OurMission from "../sections/ourMission/ourMission";
+import OurMission from "../sections/our-mission/our-mission";
 
 const IndexPage = () => (
-  <div>
+  <>
     <SEO title="Home" />
     <ContainerHWW/>
     <OurMission/>
-  </div>
+  </>
 )
 
 export default IndexPage

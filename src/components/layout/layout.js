@@ -11,10 +11,10 @@ import "./layout.scss"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <main className="layout">{children}</main>
       <footer />
-    </div>
+    </>
   )
 }
 
