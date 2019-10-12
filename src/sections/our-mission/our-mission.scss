@@ -1,4 +1,7 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/animations.scss';
+
+$paper-plane-top: 330px;
 
 .check {
   background-image: url("../../images/svg/check.svg");
@@ -78,13 +81,23 @@
 }
 
 .our-mission__logo {
-  background-image: url("../../images/svg/logo.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 600px;
-  margin-top: -200px;
-  width: 100%;
+    background-image: url('../../images/svg/logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    margin-top: -200px;
+    margin-bottom: -70vw;
+    width: 100%;
+    @media (min-width: 515px) { // this needs to be really specific 
+        margin-bottom: -45vw;
+    }
+    @media (min-width: 625px) { // this needs to be really specific 
+        margin-bottom: -30vw;
+    }
+    @media (min-width: 835px) { // this needs to be really specific 
+        margin-bottom: -227px;
+    }
 }
 
 .our-mission__paragraph {
@@ -134,5 +147,54 @@
 }
 
 .svg-group--spacing {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+.cta {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding-top: 150px;
+    display: grid;
+    place-content: center;
+    background: #fff2;
+}
+
+.cta__paper-plane {
+    background-image: url('../../images/svg/paperplane.svg');
+    height: 30px;
+    left: calc(20% - 81px);
+    top: $paper-plane-top;
+    width: 81px;
+    animation: wave 4s ease-in-out infinite;
+}
+
+.cta__paper-plane--dark {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url('../../images/svg/dark-paperplane.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    left: calc(20% - 81px);
+    top: $paper-plane-top + 50px;
+    width: 81px;
+    transform: rotateX(180deg);
+    opacity: 0.45;
+    filter: blur(3.5px);
+    animation: waveBlur 4s ease-in-out infinite;
+}
+
+.cta__btn {
+    background: $white;
+    color: $purple;
+    border: 0;
+    padding: 25px 10vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    box-shadow: 0 40px 30px #0004;
 }

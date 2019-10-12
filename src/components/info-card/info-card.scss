@@ -50,7 +50,7 @@
 
 .info__paragraph {
   font-size: 12px;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 
   @media (min-width: $large) {
     font-size: 27px;
@@ -60,4 +60,9 @@
 .info__tile {
   padding-bottom: 50px;
   width: 100%;
+}
+
+.info__link{
+  color: $pink;
+  text-decoration: underline;
 }
