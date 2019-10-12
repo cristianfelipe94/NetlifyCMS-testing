@@ -1,38 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './buttons.scss';
-function Button ({title, render, type, action}) {
+import classNames from 'classnames';
 
-    const btnType = render;
-
-    const btnStyle = {
-        main: 'btn btn--primary',
-        secondaryWhite: 'btn btn--secondary-white',
-        secondaryPink: 'btn btn--secondary-pink',
-        secondaryBlack: 'btn btn--secondary-black',
-        secondaryBig: 'btn btn--secondary-big',
-        default: 'btn'
-    }
-
+function Button ({ title, button, type, action, defaultStyle, customStyle}) {
+    const mainClassNames = classNames(`${defaultStyle} btn--primary ${customStyle}`);
+    const secondaryClassNames = classNames(`${defaultStyle} btn--secondary ${customStyle}`)
+    const btnStyle = button === 'primary' ? mainClassNames : secondaryClassNames;
     return (
-        <button className= {btnStyle[btnType]} type= {type} onClick= {action}>
+        <button className= {btnStyle} type= {type} onClick= {action} >
             {title}
         </button>
     );
 }
 
 Button.defaultProps = {
-    title: "Botón",
-    render: "default",
-    type: "button",
     action: () => console.log("Default function"),
+    title: "Botón",
+    defaultStyle: 'btn',
+    customStyle: "",
+    button: PropTypes.oneOf(['primary', 'secondary']),
+    type: PropTypes.oneOf(['submit', 'reset', 'button']),
 }
 
 Button.propTypes = {
-    title: PropTypes.string,
-    render: PropTypes.string,
-    type: PropTypes.string,
     action: PropTypes.func,
+    title: PropTypes.string,
+    defaultStyle: PropTypes.string,
+    customStyle: PropTypes.string,
+    button: PropTypes.string,
+    type: PropTypes.string,
 }
 
 export default Button;
