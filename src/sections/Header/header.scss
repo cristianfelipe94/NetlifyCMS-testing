@@ -1,15 +1,53 @@
 @import'../../styles/variables.scss';
 
+h1,h3 {
+  text-transform: uppercase;
+}
+
+.header__arrow {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;  
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
 .header {
   background: linear-gradient(115.34deg, $purple 1.69%,$purple 16.55%, $lightPurple 30.29%,
   $lightPurple 30.29%, $orange 80.16%, $orange 91.86%, $salmon 100.01%);
 }
 
-h1,h3 {
-  text-transform: uppercase;
+.header__btn {
+  margin-top: 25px;
 }
 
-.header__tittle{
+.menu__link {
+  border-bottom: 1px solid $white;
+  color: $white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+
+.header__logo {
+  padding-top: 50px;
+  width: 12%;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 70px;
+  margin-top: -35px;
+}
+
+.header__text {
+  color: $white;
+  width: 220px;
+}
+
+.header__title {
   width: 280px;
   margin-bottom: 20px;
 }
@@ -18,37 +56,3 @@ h1,h3 {
   color:$white;
 }
 
-.header__text {
-  color: $white;
-  width: 220px;
-}
-
-.header__menu {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -25px;
-  margin-bottom: 70px;
-}
-
-.menu__btn + .menu__btn {
-  margin-left: 10px;
-}
-
-.header__btn{
-  margin-top: 25px;
-}
-
-.header__logo{
-  padding-top: 50px;
-}
-
-.header__arrow {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 50px;
-  padding-top: 85px;
-  background: none;
-  border: 0;
-  cursor: pointer;
-}
