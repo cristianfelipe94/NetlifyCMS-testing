@@ -1,55 +1,46 @@
-import React from "react";
-import "./package.scss";
+import React from "react"
+import "./package.scss"
+const packagesData = require("./package-data.json")
 
-export default ({bundle = "basic", price = "$60"}) => {
-    const type = bundle;
+const Package = ({ data, bundle }) => {
 
-    const bundleName= {
-        basic : <p>Básico</p>,
-        standard: <p>Estandar</p>,
-        premium: <p>Premium</p>
-    }
+  const bundleFeatures = (processFeature) => {
+    const featureItem = processFeature.features.map((feature) => {
+      return (
+        <li>{feature}</li>
+      )
+    });
+    return <ul className="package__features">{featureItem}</ul>
+  }
 
-    const bundleFeatures= {
-        basic : [
-            <li>Con este paquete se podrán crear comunicados.</li>,
-            <li>Capacidad de recibir consejos de los mejores comunicadores.</li>
-        ],
-        standard: [
-            <li>Con este paquete los comunicados viajan a más comunicadores.</li>,
-            <li>Otras más.</li>
-        ],
-        premium: [
-            <li>Con este paquete la cantidad de comunicados creados no es algo en que pensar.</li>,
-            <li>Otras más.</li>
-        ]
-    }
-
-    const bundleColors= {
-        basic : "package package--basic",
-        standard: "package package--standard",
-        premium: "package package--premium"
-    }
-    
-    return (
-        <div className= {bundleColors[type]}>
-            <div className= "bundleContent">
-                <h3 className= "package__title">
-                    Paquete
-                </h3>
-                <p className= "package__type">
-                    {bundleName[type]}
-                </p>
-                <p className= "package__price">
-                    {price}
-                </p>
-                <ul className= "package__features">
-                    {bundleFeatures[type]}
-                </ul>
-                <button>
-                    Obtener paquete
-                </button>
+  const processBundle = () => {
+    const bundleCard = data.bundles.map((dataBundle) => {
+      return (
+        <div className={`package package--${dataBundle.bundle}`}>
+          <div className="package__body">
+            <div className= "package__head">
+              <h3 className="package__title">Paquete</h3>
+              <p className="package__type">{dataBundle.title}</p>
             </div>
+            <p className="package__price">{dataBundle.price}</p>
+            {bundleFeatures(dataBundle)}
+            <div className="package__footer">
+              <button style= {{transform: "rotateX(180deg)"}}>Obtener paquete</button>
+            </div>
+          </div>
         </div>
-    )
+      )
+    });
+    console.log(bundleCard);
+    return bundleCard;
+  };
+
+  return (processBundle());
 }
+
+Package.defaultProps = {
+  bundle: "basic",
+  data: packagesData,
+}
+
+export default Package

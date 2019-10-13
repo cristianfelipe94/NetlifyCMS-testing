@@ -1,6 +1,11 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
-.bundler {
-    display: flex;
-    flex-direction: row;
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section__bundler {
+  display: flex;
+  flex-direction: row;
 }

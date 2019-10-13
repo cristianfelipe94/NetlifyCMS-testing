@@ -5,7 +5,9 @@
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0.15em;
-    width: 33.3%;
+    max-width: 381px;
+    border-radius: 6px;
+    margin: 15px;
 }
 
 .package__title {
@@ -14,18 +16,20 @@
     font-size: 30px;
     line-height: 45px;
     text-align: center;
+    padding: 15px 0 0;
+    text-transform: uppercase;
 }
 
 .package__type {
     font-size: 25px;
     line-height: 37px;
     text-align: center;
+    padding: 0;
 }
 
 .package__price {
     color: #FFFFFF;
     font-size: 45px;
-    line-height: 67px;
     text-align: center;
 }
 
@@ -33,6 +37,12 @@
     color: #FFFFFF;
     font-size: 18px;
     line-height: 27px;
+    padding: 27px;
+}
+
+.package__features li {
+    border-top: 1px solid $white;
+    padding: 20px 0;
 }
 
 .package--basic {
@@ -41,33 +51,56 @@
     position: relative;
 }
 
-.bundleContent {
+.package__body {
     z-index: 1;
 }
 
-.package--basic::before {
-    content: "";
-    background-image: url(../../images/svg/package-vector.svg);
-    height: 100%;
-    z-index: -1;
-    width: 100%;
+.package__head {
     background-size: contain;
+    background-image: url(../../images/svg/package-vector.svg);
     background-repeat: no-repeat;
-    position: absolute;
+    padding: 0 0 38px;
+    position: relative;
+    top: -1px;
 }
 
-.package--basic::after {
-    content: "aa";
-    background-image: url(../../images/svg/package-vector.svg);
-    height: 100%;
-    z-index: -1;
-    width: 100%;
+.package__footer {
     background-size: contain;
+    background-image: url(../../images/svg/package-vector.svg);
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
     transform: rotateX(180deg);
+    background-position: center;
+    text-align: center;
+    padding: 38px 0;
+    transform: rotateX(180deg);
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
 }
+
+// .package--basic::before {
+//     content: "";
+//     background-image: url(../../images/svg/package-vector1.svg);
+//     height: 100%;
+//     z-index: -1;
+//     width: 100%;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     position: absolute;
+// }
+
+// .package--basic::after {
+//     content: "";
+//     background-image: url(../../images/svg/package-vector1.svg);
+//     height: 100%;
+//     z-index: -1;
+//     width: 100%;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     bottom: 0;
+//     transform: rotateX(180deg);
+// }
 
 .package--standard {
     background-color: $pink;
