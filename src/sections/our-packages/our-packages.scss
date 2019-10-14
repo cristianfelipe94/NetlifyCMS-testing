@@ -9,4 +9,8 @@
 .section__bundler {
   display: flex;
   flex-direction: row;
+  padding: 0 0 200px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }

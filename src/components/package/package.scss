@@ -1,88 +1,95 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .package {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0.15em;
-    max-width: 381px;
-    border-radius: 15px;
-    margin: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  max-width: 381px;
+  border-radius: 15px;
+  margin: 15px;
+  @media (max-width: 800px) {
+    margin: 40px auto;
+    border-radius: 25px;
+  }
 }
 
 .package__title {
-    color: $black;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 45px;
-    text-align: center;
-    text-transform: uppercase;
+  color: $black;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .package__type {
-    font-size: 25px;
-    line-height: 37px;
-    text-align: center;
-    padding: 0;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+  padding: 0;
 }
 
 .package__price {
-    color: #FFFFFF;
-    font-size: 45px;
-    text-align: center;
+  color: #ffffff;
+  font-size: 45px;
+  text-align: center;
 }
 
 .package__features {
-    color: #FFFFFF;
-    font-size: 18px;
-    line-height: 27px;
-    padding: 27px 27px 95px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 27px 27px 95px;
 }
 
 .package__features li {
-    border-top: 1px solid $white;
-    padding: 20px 0;
+  border-top: 1px solid $white;
+  padding: 20px 0;
 }
 
 .package__body {
-    z-index: 1;
-    height: 100%;
-    position: relative;
+  z-index: 1;
+  height: 100%;
+  position: relative;
 }
 
 .package__head {
-    background-size: contain;
-    background-image: url(../../images/svg/package-vector.svg);
-    background-repeat: no-repeat;
-    padding: 0 0 38px;
-    position: relative;
-    top: -1px;
+  background-size: contain;
+  background-image: url(../../images/svg/package-vector.svg);
+  background-repeat: no-repeat;
+  padding: 0 0 38px;
+  position: relative;
+  top: -1px;
 }
 
 .package__footer {
-    background-size: cover;
-    background-image: url(../../images/svg/package-vector.svg);
-    background-repeat: no-repeat;
-    transform: rotateX(180deg);
-    background-position: center;
-    text-align: center;
-    transform: rotateX(180deg);
-    position: absolute;
-    bottom: 0;
-    min-height: 95px;
-    width: 100%;
+  background-size: cover;
+  background-image: url(../../images/svg/package-vector.svg);
+  background-repeat: no-repeat;
+  transform: rotateX(180deg);
+  background-position: center;
+  text-align: center;
+  transform: rotateX(180deg);
+  position: absolute;
+  bottom: 0;
+  min-height: 95px;
+  width: 100%;
+  @media (max-width: 800px) {
+    min-height: 119px;
+  }
 }
 
 .package--basic {
-    background-color: $purple;
-    z-index: -1;
-    position: relative;
+  background-color: $purple;
+  z-index: -1;
+  position: relative;
 }
 
 .package--standard {
-    background-color: $pink;
+  background-color: $pink;
 }
 
 .package--premium {
-    background-color: $orange;
+  background-color: $orange;
 }
