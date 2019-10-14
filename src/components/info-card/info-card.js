@@ -1,7 +1,7 @@
 import React from "react";
 import "./info-card.scss";
 
-export default ({ title, paragraph, id, src, link, href, modifier }) => {
+export default ({ title, paragraph, id, src, href, modifier }) => {
 
   return (
     <div className={`container ${modifier}`}>

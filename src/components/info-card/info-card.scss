@@ -64,5 +64,10 @@
 
 .info__link{
   color: $pink;
+  font-size: 12px;
   text-decoration: underline;
+
+  @media (min-width: $medium) {
+    font-size: 18px;
+  }
 }
