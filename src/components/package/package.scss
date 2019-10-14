@@ -6,7 +6,7 @@
     font-weight: normal;
     letter-spacing: 0.15em;
     max-width: 381px;
-    border-radius: 6px;
+    border-radius: 15px;
     margin: 15px;
 }
 
@@ -44,12 +44,6 @@
     padding: 20px 0;
 }
 
-.package--basic {
-    background-color: $purple;
-    z-index: -1;
-    position: relative;
-}
-
 .package__body {
     z-index: 1;
     height: 100%;
@@ -79,29 +73,11 @@
     width: 100%;
 }
 
-// .package--basic::before {
-//     content: "";
-//     background-image: url(../../images/svg/package-vector1.svg);
-//     height: 100%;
-//     z-index: -1;
-//     width: 100%;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     position: absolute;
-// }
-
-// .package--basic::after {
-//     content: "";
-//     background-image: url(../../images/svg/package-vector1.svg);
-//     height: 100%;
-//     z-index: -1;
-//     width: 100%;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     position: absolute;
-//     bottom: 0;
-//     transform: rotateX(180deg);
-// }
+.package--basic {
+    background-color: $purple;
+    z-index: -1;
+    position: relative;
+}
 
 .package--standard {
     background-color: $pink;
