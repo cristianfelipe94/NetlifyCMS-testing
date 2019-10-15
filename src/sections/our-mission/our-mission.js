@@ -37,8 +37,12 @@ export default () => {
                     <div className="our-mission__svg check"/>
                 </div>
                 <div className="our-mission__logo"/>
-                <div className="our-mission__cta"/>
             </Layout>
+            <div className="cta">
+                <div className="our-mission__svg cta__paper-plane--dark"/>
+                <div className="our-mission__svg cta__paper-plane"/>
+                <button className="cta__btn">Crea tu comunicado</button>
+            </div>
         </section>
     );
 }
