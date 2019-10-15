@@ -1,5 +1,5 @@
 <svg width="113" height="150" viewBox="0 0 113 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<use xlink:href="#symbol-id"></use>
+<!-- <use xlink:href="#symbol-id"></use> -->
 <rect width="113" height="150" rx="5" fill="url(#symbol-id)"></rect>
 <rect x="12" y="10" width="90" height="9" rx="4.5" fill="white"></rect>
 <rect x="12" y="27" width="81" height="5" rx="2.5" fill="white" fill-opacity="0.9"></rect>
