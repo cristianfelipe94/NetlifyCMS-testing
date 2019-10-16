@@ -10,7 +10,7 @@ export default () => {
   return (
     <section className="our-mission">
       <canvas className="our-mission__canvas"></canvas>
-      <Layout>
+      <div className='wrapper'>
         <h2 className="our-mission__title">Nuestra misión</h2>
         <p className="our-mission__paragraph">
           Trasladar ideas valiosas de quienes las crean a
@@ -38,7 +38,7 @@ export default () => {
         </div>
         <div className="our-mission__logo" />
         <div className="our-mission__cta" />
-      </Layout>
+      </div>
     </section>
   );
 }

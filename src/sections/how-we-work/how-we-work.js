@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../components/layout/layout'
 import InfoCard from '../../components/info-card/info-card'
 
 export default () => {
