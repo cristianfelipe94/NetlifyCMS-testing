@@ -51,6 +51,55 @@ $paper-plane-top: 330px;
   }
 }
 
+.cta {
+  background: #fff2;
+  display: grid;
+  height: 400px;
+  padding-top: 150px;
+  place-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.cta__btn {
+  background: $white;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 40px 30px #0004;
+  color: $purple;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 25px 10vw;
+  text-transform: uppercase;
+}
+
+.cta__paper-plane {
+  animation: wave 4s ease-in-out infinite;
+  background-image: url("../../images/svg/paperplane.svg");
+  height: 30px;
+  left: calc(20% - 81px);
+  top: $paper-plane-top;
+  width: 81px;
+}
+
+.cta__paper-plane--dark {
+  animation: waveBlur 4s ease-in-out infinite;
+  background-image: url("../../images/svg/dark-paperplane.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  filter: blur(3.5px);
+  height: 40px;
+  left: calc(20% - 81px);
+  opacity: 0.45;
+  position: absolute;
+  top: $paper-plane-top + 50px;
+  transform: rotateX(180deg);
+  width: 81px;
+}
+
 .light-bulb {
   background-image: url("../../images/svg/lightbulb.svg");
 
@@ -86,9 +135,10 @@ $paper-plane-top: 330px;
   background-repeat: no-repeat;
   background-size: contain;
   height: 500px;
-  margin-top: -200px;
   margin-bottom: -70vw;
+  margin-top: -200px;
   width: 100%;
+
   @media (min-width: 515px) {
     // this needs to be really specific
     margin-bottom: -45vw;
@@ -151,53 +201,4 @@ $paper-plane-top: 330px;
 
 .svg-group--spacing {
   margin-bottom: 100px;
-}
-
-.cta {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  padding-top: 150px;
-  display: grid;
-  place-content: center;
-  background: #fff2;
-}
-
-.cta__paper-plane {
-  background-image: url("../../images/svg/paperplane.svg");
-  height: 30px;
-  left: calc(20% - 81px);
-  top: $paper-plane-top;
-  width: 81px;
-  animation: wave 4s ease-in-out infinite;
-}
-
-.cta__paper-plane--dark {
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url("../../images/svg/dark-paperplane.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 40px;
-  left: calc(20% - 81px);
-  top: $paper-plane-top + 50px;
-  width: 81px;
-  transform: rotateX(180deg);
-  opacity: 0.45;
-  filter: blur(3.5px);
-  animation: waveBlur 4s ease-in-out infinite;
-}
-
-.cta__btn {
-  background: $white;
-  color: $purple;
-  border: 0;
-  padding: 25px 10vw;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  border-radius: 5px;
-  box-shadow: 0 40px 30px #0004;
 }

@@ -31,11 +31,11 @@ export default () => {
 
   return (
     <section>
-      <Layout>
+      <div>
         {
           cards.map(card => <InfoCard {...card}/>)
         }
-      </Layout>
+      </div>
     </section>
   )
 }
