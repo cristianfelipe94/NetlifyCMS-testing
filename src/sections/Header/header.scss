@@ -28,16 +28,13 @@
   padding-top: 60px;
 }
 
+.header__btn--primary {
+  margin-top: 36px;
+}
+
 .header__logo {
   padding-top: 50px;
   width: 12%;
-}
-
-.header__menu {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 110px;
-  margin-top: -35px;
 }
 
 .header__nd-text {
@@ -61,12 +58,8 @@
   color: $white;
 }
 
-.menu__link {
-  border-bottom: 1px solid $white;
-  color: $white;
-  font-weight: bold;
-  margin-right: 20px;
-  text-decoration: none;
-  text-transform: capitalize;
- 
+.section__wrapper {
+  margin: 0 auto;
+  max-width: $layoutSize;
+  padding: 0 30px;
 }

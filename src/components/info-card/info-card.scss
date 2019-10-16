@@ -19,7 +19,6 @@
 
 .container__info{
     height: 334px;
-    
     width: 633.55px;
     & :nth-child(-n + 2){ 
         padding-bottom: 50px;
@@ -66,4 +65,24 @@
     @media (min-width: $large) {
         
     }*/
+}
+
+#comunicado{
+    max-width: 71px;
+    @media (min-width: $medium) {
+        max-width: 104px;
+    }
+
+    @media (min-width: $large) {
+        max-width: 189px;
+    }
+
+}
+
+#media{
+
+}
+
+#grafica{
+    
 }

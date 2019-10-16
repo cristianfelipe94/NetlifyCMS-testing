@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.menu__link {
+  border-bottom: 1px solid $white;
+  color: $white;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding-top: 34px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 110px;
+  margin-top: -69px;
+}
+
