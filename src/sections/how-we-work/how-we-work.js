@@ -29,7 +29,7 @@ export default () => {
   ]
 
   return (
-    <section className='wrapper'>
+    <section className='section__wrapper'>
         {
           cards.map(card => <InfoCard {...card}/>)
         }

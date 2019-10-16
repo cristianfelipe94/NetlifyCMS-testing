@@ -57,8 +57,8 @@ h4 {
   }
 }
 
-.wrapper{
+.section__wrapper {
   margin: 0 auto;
-  max-width: 1180px;
-  padding: 0 15px;
-}
+  max-width: $layoutSize;
+  padding: 0 30px;
+ }
