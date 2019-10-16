@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.footer__logo {
+  background-image: url('../../images/svg/logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 99px;
+  width: 165px;
+}
+
+.contact {
+  background-color: $black;
+  color: $white;
+}
+
+.contact__info {
+  display: inline;
+}
+
+.contact__avatar {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+} 

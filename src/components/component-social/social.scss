@@ -1,0 +1,21 @@
+.social {
+  height: 30px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+.social--facebook {
+  background-image: url("../../images/facebook.png");
+}
+
+.social--instagram {
+  background-image: url("../../images/instagram.png");
+}
+
+.social--whatsapp {
+  background-image: url("../../images/whatsapp.png");
+}
