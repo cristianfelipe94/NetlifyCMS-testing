@@ -30,12 +30,10 @@ export default () => {
   ]
 
   return (
-    <section>
-      <div>
+    <section className='wrapper'>
         {
           cards.map(card => <InfoCard {...card}/>)
         }
-      </div>
     </section>
   )
 }
