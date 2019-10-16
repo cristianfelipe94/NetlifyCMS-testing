@@ -14,12 +14,52 @@
   color: $white;
 }
 
-.contact__info {
-  display: inline;
+.contact__greetings {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 65px 0;
 }
 
-.contact__avatar {
+.greetings__text {
   display: inline-block;
-  height: 100px;
-  width: 100px;
-} 
+  padding: 25px;
+  width: 70%;
+}
+
+.greetings__text > :first-child{
+  font-weight: bold;
+}
+
+.greetings__avatar {
+  background-image: url(../../images/avatar-thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100% 100%;
+  display: inline-block;
+  height: 155px;
+  width: 155px;
+}
+
+.contact__social {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
+  padding-top: 0;
+}
+
+.social__container {
+  width: 21%;
+}
+
+.footer__gradient {
+  background-image: url(../../images/svg/footer-gradient.svg);
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 100%;
+  position: relative;
+}

@@ -7,14 +7,18 @@ const Footer = () => {
   return (
     <section className="contact">
       <Layout>
-        <image src="../images/avatar-thumbnail.png" alt="Imagen de contacto" className="contact__avatar"/>
-        <div className="contact__info">
-          <p>Hola, Soy Sergio</p>
-          <p>Comuniquese con nosotros al correo example.atana@gmail.com.</p>
+        <div className="contact__greetings">
+          <div className="greetings__avatar"/>
+          <div className="greetings__text">
+            <p>Hola, Soy Sergio</p>
+            <p>Comuniquese con nosotros al correo example.atana@gmail.com.</p>
+          </div>
         </div>
-        <div>
+      </Layout>
+      <div className="footer__gradient">
+        <div className="contact__social">
           <div className= "footer__logo"></div>
-          <div>
+          <div className="social__container">
             <p>
               Siguenos en nuestras redes sociales:
             </p>
@@ -23,7 +27,7 @@ const Footer = () => {
             <Social platform= "whatsapp"/>
           </div>
         </div>
-      </Layout>
+      </div>
     </section>
   )
 };
