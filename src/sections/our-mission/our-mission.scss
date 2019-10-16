@@ -84,11 +84,11 @@ $paper-plane-top: 330px;
 }
 
 .cta__paper-plane--dark {
+  content: "";
   animation: waveBlur 4s ease-in-out infinite;
   background-image: url("../../images/svg/dark-paperplane.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  content: "";
   display: block;
   filter: blur(3.5px);
   height: 40px;
