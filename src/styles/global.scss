@@ -1,8 +1,15 @@
 @import "./reset.scss";
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import "./variables.scss";
 
+.section__wrapper {
+  margin: 0 auto;
+  max-width: $layoutSize;
+  padding: 0 30px;
+}
+
 body {
-  font-family: $poppins;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
   letter-spacing: 0.15em;
 }
 
@@ -55,10 +62,4 @@ h4 {
   @media (min-width: $large) {
     font-size: 25px;
   }
-}
-
-.wrapper{
-  margin: 0 auto;
-  max-width: 1180px;
-  padding: 0 15px;
 }
