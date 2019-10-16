@@ -6,17 +6,17 @@ const Header = () => (
 
   <div className="header">
     <Layout>
-      <a href="#"><img src="atana-logoo.svg" className="header__logo"></img></a>
+      <a href=""><img src="atana-logo.svg" className="header__logo"></img></a>
       <div className="header__menu">
-        <a href="#" className="menu__link">iniciar sesión</a>
-        <button className="menu__btn">suscribirse</button>
+        <a href="" className="menu__link">iniciar sesión</a>
+        <button>suscribirse</button>
       </div>
-      <h3 className="header__title--color-white">crea y distribuye</h3>
+      <p className="header__st-text">crea y distribuye</p>
       <h1 className="header__title">comunicados de prensa</h1>
-      <p className="header__text">De una manera más fácil, rápida y sencilla. </p>
-      <button className="header__btn">crea un comunicado</button>
+      <p className="header__nd-text">De una manera más fácil, rápida y sencilla. </p>
+      <a href="" className="header__link">crea un comunicado</a>
       <div className="header__arrow">
-        <img src="arrow.svg"></img>
+        <button className="arrow__btn"></button>
       </div>
     </Layout>
   </div>
