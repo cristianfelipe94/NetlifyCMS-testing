@@ -8,14 +8,16 @@ export default () => {
       paragraph:
         "Revisamos los comunicados de prensa y recomendamos cambios previo al envío.",
       id: "comunicado",
+      link: 'Crea un comunicado >',
       src: "comunicado.svg",
     },
     {
+      modifier: "container--reverse",
       title: "Distribución automatizada",
       paragraph:
         "Envíamos a medios y periodistas de acuerdo al público meta y la categoría.",
       id: "media",
-      modifier: "container--reverse",
+      link: 'Crea un comunicado >',
       src: "media.svg",
     },
     {
@@ -23,6 +25,7 @@ export default () => {
       paragraph:
         "Hacemos un reporte de análisis de desempeño del comunicado enviado.",
       id: "grafica",
+      link: 'Crea un comunicado >',
       src: "grafica.svg",
     },
   ]
