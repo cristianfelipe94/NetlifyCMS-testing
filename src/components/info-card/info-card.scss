@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media (min-width: $medium) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.container__animation {
+  margin: 0 auto;
+  
+  @media (min-width: $medium) {
+    margin: none;
+  }
+}
+
+.container__info {
+  display: flex;
+  flex-direction: column;
+  height: 326px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 281px;
+
+  @media (min-width: $medium) {
+    text-align: left;
+  }
+
+  @media (min-width: $large) {
+    height: 334px;
+    width: 580px;
+  }
+}
+
+.container--reverse {
+  flex-direction: column-reverse;
+
+  @media (min-width: $medium) {
+    flex-direction: row-reverse;
+  }
+}
+
+.info__paragraph {
+  font-size: 12px;
+  padding-bottom: 15px;
+
+  @media (min-width: $large) {
+    font-size: 27px;
+  }
+}
+
+.info__tile {
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.info__link{
+  color: $pink;
+  font-size: 12px;
+  text-decoration: underline;
+
+  @media (min-width: $medium) {
+    font-size: 18px;
+  }
+}
