@@ -51,7 +51,7 @@ export default () => {
 		svgAnimations(animations, './<!>.svg');
 	})
 
-	return (
+	return () => {
 		<div className="container">
 			<div id="text" className='container__svg'>
 				<p className='svg__paragraph'>Podés crear un comunicado de prensa.</p>
@@ -66,5 +66,6 @@ export default () => {
 				<p className='svg__paragraph'>... a todos los medios y periodistas categorizados</p>
 			</div>
 		</div>
-	)
+	}
+
 }

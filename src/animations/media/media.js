@@ -19,7 +19,6 @@ export default () => {
 		svgAnimations(media, './<!>.svg');
 	})
 
-	return (
-		<div id="media"></div>
-	)
+	return () => <div id="media"></div>
+	
 }

@@ -1,5 +1,8 @@
 import React from "react"
 import InfoCard from "../../components/info-card/info-card"
+import Comunicado from "../../animations/comunicado/comunicado"
+import Media from "../../animations/media/media"
+import Graphic  from "../../animations/graphic/graphic"
 
 export default () => {
   const cards = [
@@ -10,6 +13,7 @@ export default () => {
       id: "comunicado",
       link: 'Crea un comunicado >',
       src: "comunicado.svg",
+      Animation: Comunicado()
     },
     {
       modifier: "container--reverse",
@@ -19,6 +23,7 @@ export default () => {
       id: "media",
       link: 'Crea un comunicado >',
       src: "media.svg",
+      Animation: Media()
     },
     {
       title: "Seguimiento",
@@ -27,13 +32,14 @@ export default () => {
       id: "grafica",
       link: 'Crea un comunicado >',
       src: "grafica.svg",
+      Animation: Graphic()
     },
   ]
 
   return (
     <section className="section__wrapper">
-      {cards.map(card => (
-        <InfoCard {...card} />
+      {cards.map((card, i) => (
+        <InfoCard key={i} {...card} />
       ))}
     </section>
   )
