@@ -8,8 +8,7 @@ export default ({ title, paragraph, id, src, href, link, modifier }) => {
         <h3 className="info__tile">{title}</h3>
         <p className="info__paragraph">{paragraph}</p>
         <a className="info__link" href={href}>
-          {" "}
-          {link}{" "}
+          {link}
         </a>
       </div>
 
