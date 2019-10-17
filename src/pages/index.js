@@ -8,8 +8,8 @@ import OurMission from "../sections/our-mission/our-mission"
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <ContainerHWW/>
-    <OurMission/>
+    <ContainerHWW />
+    <OurMission />
   </>
 )
 
