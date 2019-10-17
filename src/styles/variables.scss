@@ -1,5 +1,8 @@
-// Font
-$mainFont: Poppins;
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+//Breakpoints
+$large: 1367px;
+$medium: 1025px;
 
 //Colors
 $black: #000;
@@ -10,9 +13,8 @@ $purple: #72146b;
 $salmon: #ef5147;
 $white: #fff;
 
-//Breakpoints
-$large: 1367px;
-$medium: 1025px;
+//Fonts
+$mainFont: "poppins", Arial, Helvetica, sans-serif;
 
 // Layout
 $layoutSize: 960px;
