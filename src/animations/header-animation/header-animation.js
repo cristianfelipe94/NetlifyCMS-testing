@@ -45,10 +45,10 @@ const animations = {
 	},
 };
 
-export default () => {	
+export default () => {
+
 	useEffect(() => {
 		svgAnimations(animations, './<!>.svg');
-
 	})
 
 	return (
