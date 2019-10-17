@@ -1,12 +1,14 @@
-import React from 'react';
-import './nav-menu.scss';
-import Button from '../../components/ComponentButtons/buttons';
+import React from "react"
+import "./nav-menu.scss"
+import { Link } from "gatsby";
 
 const Menu = () => (
   <React.Fragment>
-    <div className="header__menu">
-      <a href="" className="menu__link">iniciar sesión</a>
-      <Button children="Suscribirse" button="primary" type="button" />
+    <div className="nav__menu">
+      <Link to="" className="nav__menu--link">
+        iniciar sesión
+      </Link>
+      <Link to="" className= "btn btn--primary">Suscribirse</Link>
     </div>
   </React.Fragment>
 )

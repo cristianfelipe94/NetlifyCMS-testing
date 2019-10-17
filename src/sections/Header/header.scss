@@ -1,11 +1,16 @@
 @import "../../styles/variables.scss";
 
+
 .arrow__btn {
   background: transparent url("../../images/svg/arrow.svg") no-repeat;
   border: 0;
   cursor: pointer;
   height: 43px;
   width: 36px;
+}
+
+.btn {
+  text-decoration: none;
 }
 
 .header {
@@ -37,14 +42,15 @@
   width: 12%;
 }
 
-.header__nd-text {
+.header__text {
   color: $white;
+  margin-bottom: 30px;
   width: 270px;
 }
 
-.header__st-text {
+.header__title-span {
   color: $white;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
@@ -58,8 +64,3 @@
   color: $white;
 }
 
-.section__wrapper {
-  margin: 0 auto;
-  max-width: $layoutSize;
-  padding: 0 30px;
-}
