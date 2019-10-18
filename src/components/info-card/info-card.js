@@ -1,16 +1,15 @@
 import React from "react"
 import "./info-card.scss"
 
-export default ({
-  title,
+
+const InfoCard = ({ title,
   paragraph,
   id,
   href,
   src,
   link,
-  modifier = "",
-  Animation,
-}) => {
+  modifier,
+  Animation, }) => { 
   return (
     <div className={`container ${modifier}`}>
       <div className="container__info">
@@ -27,3 +26,12 @@ export default ({
     </div>
   )
 }
+
+InfoCard.defaultProps = {
+  modifier: ""
+}
+
+
+
+export default InfoCard
+
