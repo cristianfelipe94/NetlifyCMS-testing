@@ -54,8 +54,8 @@ export default () => {
     svgAnimations(animations, "./<!>.svg")
   })
 
-  return () => {
-    ;<div className="container">
+  return () => (
+    <div className="container">
       <div id="text" className="container__svg">
         <p className="svg__paragraph">Podés crear un comunicado de prensa.</p>
       </div>
@@ -71,5 +71,5 @@ export default () => {
         </p>
       </div>
     </div>
-  }
+  )
 }
