@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.footer__logo {
+  background-image: url('../../images/svg/logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 99px;
+  width: 165px;
+}
+
+.contact {
+  background-color: $black;
+  color: $white;
+}
+
+.contact__social {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
+  padding-top: 0;
+}
+
+.social__container {
+  width: 21%;
+}
+
+.footer__gradient {
+  background-image: url(../../images/svg/footer-gradient.svg);
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 100%;
+  position: relative;
+}
+
+.social {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 15px;
+}
+
+.social--facebook {
+  background-image: url("../../images/facebook.png");
+}
+
+.social--instagram {
+  background-image: url("../../images/instagram.png");
+}
+
+.social--whatsapp {
+  background-image: url("../../images/whatsapp.png");
+}
