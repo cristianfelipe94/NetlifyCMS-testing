@@ -14,33 +14,6 @@
   color: $white;
 }
 
-.contact__greetings {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  padding: 65px 0;
-}
-
-.greetings__text {
-  display: inline-block;
-  padding: 25px;
-  width: 70%;
-}
-
-.greetings__text > :first-child{
-  font-weight: bold;
-}
-
-.greetings__avatar {
-  background-image: url(../../images/avatar-thumbnail.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 100% 100%;
-  display: inline-block;
-  height: 155px;
-  width: 155px;
-}
-
 .contact__social {
   align-items: flex-end;
   display: flex;
@@ -62,4 +35,27 @@
   height: 170px;
   width: 100%;
   position: relative;
+}
+
+.social {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 15px;
+}
+
+.social--facebook {
+  background-image: url("../../images/facebook.png");
+}
+
+.social--instagram {
+  background-image: url("../../images/instagram.png");
+}
+
+.social--whatsapp {
+  background-image: url("../../images/whatsapp.png");
 }
