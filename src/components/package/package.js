@@ -4,14 +4,7 @@ import PropTypes from "prop-types"
 import "./package.scss"
 import "../ComponentButtons/buttons.scss"
 
-const Package = ({ data, type }) => {
-  const toRenderData = []
-
-  data.bundles.map(element => {
-    if (element.bundle === type && element !== undefined) {
-      toRenderData.push(element)
-    }
-  })
+const Package = ({ data }) => {
 
   const bundleFeatures = processFeature => {
     const featureItem = processFeature.features.map(feature => {
@@ -20,8 +13,8 @@ const Package = ({ data, type }) => {
     return <ul className="package__features">{featureItem}</ul>
   }
 
-  const processBundle = () => {
-    const bundleCard = toRenderData.map(dataBundle => {
+  return (
+    data.bundles.map(dataBundle => {
       return (
         <div className={`package package--${dataBundle.bundle}`}>
           <div className="package__body">
@@ -40,10 +33,7 @@ const Package = ({ data, type }) => {
         </div>
       )
     })
-    return bundleCard
-  }
-
-  return processBundle()
+  )
 }
 
 Package.defaultProps = {
