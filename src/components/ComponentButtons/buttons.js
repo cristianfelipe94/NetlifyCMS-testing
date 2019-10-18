@@ -4,12 +4,8 @@ import "./buttons.scss"
 import classNames from "classnames"
 
 function Button({ children, button, type, action, customStyle }) {
-  const mainClassNames = classNames(
-    `btn btn--primary ${customStyle}`
-  )
-  const secondaryClassNames = classNames(
-    `btn btn--secondary ${customStyle}`
-  )
+  const mainClassNames = classNames(`btn btn--primary ${customStyle}`)
+  const secondaryClassNames = classNames(`btn btn--secondary ${customStyle}`)
   const btnStyle = button === "primary" ? mainClassNames : secondaryClassNames
   return (
     <button className={btnStyle} type={type} onClick={action}>

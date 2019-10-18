@@ -1,21 +1,27 @@
 import React from "react"
-import Button from "../ComponentButtons/buttons"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import "./package.scss"
-const packagesData = require("./package-data.json")
+import "../ComponentButtons/buttons.scss"
 
-const Package = ({ data }) => {
+const Package = ({ data, type }) => {
+  const toRenderData = []
 
-  const bundleFeatures = (processFeature) => {
-    const featureItem = processFeature.features.map((feature) => {
-      return (
-        <li>{feature}</li>
-      )
-    });
+  data.bundles.map(element => {
+    if (element.bundle === type && element !== undefined) {
+      toRenderData.push(element)
+    }
+  })
+
+  const bundleFeatures = processFeature => {
+    const featureItem = processFeature.features.map(feature => {
+      return <li>{feature}</li>
+    })
     return <ul className="package__features">{featureItem}</ul>
   }
 
   const processBundle = () => {
-    const bundleCard = data.bundles.map((dataBundle) => {
+    const bundleCard = toRenderData.map(dataBundle => {
       return (
         <div className={`package package--${dataBundle.bundle}`}>
           <div className="package__body">
@@ -26,20 +32,28 @@ const Package = ({ data }) => {
             <p className="package__price">{dataBundle.price}</p>
             {bundleFeatures(dataBundle)}
             <div className="package__footer">
-              <Button button="main" children="Obtener paquete" customStyle="package__btn"/>
+              <Link to="" className=" btn btn--secondary package__btn">
+                Obtener {dataBundle.title}
+              </Link>
             </div>
           </div>
         </div>
       )
-    });
-    return bundleCard;
-  };
+    })
+    return bundleCard
+  }
 
-  return (processBundle());
+  return processBundle()
 }
 
 Package.defaultProps = {
-  data: packagesData,
+  data: [],
+  bundle: "basic",
+}
+
+Package.propTypes = {
+  data: PropTypes.array,
+  bundle: PropTypes.string,
 }
 
 export default Package
