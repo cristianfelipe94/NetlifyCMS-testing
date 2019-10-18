@@ -10,7 +10,7 @@ const Header = () => (
       <Link to="">
         <img
           src="atana-logo.svg"
-          alt="logo atana"
+          alt="átana"
           className="header__logo"
         />
       </Link>
@@ -19,7 +19,7 @@ const Header = () => (
       <p className="header__text">
         De una manera más fácil, rápida y sencilla.{" "}
       </p>
-      <Link to="" className="btn btn--primary">Suscribirse</Link>
+      <Link to="" className="nav__btn btn btn--primary">Suscribirse</Link>
       <div className="header__arrow">
         <button className="arrow__btn"></button>
       </div>

@@ -3,11 +3,11 @@
 .nav__menu {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 110px;
-  margin-top: -69px;
+  margin-bottom: 100px;
+  margin-top: -59px;
 }
 
-.nav__menu--link {
+.nav__link {
   border-bottom: 1px solid $white;
   color: $white;
   font-weight: bold;
@@ -17,6 +17,7 @@
   text-transform: capitalize;
 }
 
-.btn--primary {
+.nav__btn {
   height: 30px;
+  text-decoration: none;
 }
