@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import svgAnimations from "../svg-animations"
-import "./media.scss"
 
 const media = {
   media(s, tl) {
