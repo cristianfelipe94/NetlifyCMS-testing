@@ -1,24 +1,21 @@
 import React, { useEffect } from "react"
 import svgAnimations from "../svg-animations"
-import './media.scss'
+import "./media.scss"
 
 const media = {
-	media(s, tl) {
-		tl
-			.set(s, { display: 'block' })
-			.from(s, 1, { opacity: 0 })
-			.staggerFrom(`${s} svg *`, 1, { opacity: 0 }, 0.5)
-			.to(s, 1, { opacity: 0 }, '+=1')
-			.call(() => tl.restart(true, false))
-	},
-};
+  media(s, tl) {
+    tl.set(s, { display: "block" })
+      .from(s, 1, { opacity: 0 })
+      .staggerFrom(`${s} svg *`, 1, { opacity: 0 }, 0.5)
+      .to(s, 1, { opacity: 0 }, "+=1")
+      .call(() => tl.restart(true, false))
+  },
+}
 
 export default () => {
+  useEffect(() => {
+    svgAnimations(media, "./<!>.svg")
+  })
 
-	useEffect(() => {
-		svgAnimations(media, './<!>.svg');
-	})
-
-	return () => <div id="media"></div>
-	
+  return () => <div id="media"></div>
 }
