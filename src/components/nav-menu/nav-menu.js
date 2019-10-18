@@ -1,6 +1,6 @@
 import React from "react"
 import "./nav-menu.scss"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
 const Menu = () => (
   <React.Fragment>
@@ -8,7 +8,9 @@ const Menu = () => (
       <Link to="" className="nav__link">
         iniciar sesión
       </Link>
-      <Link to="" className= "nav__btn btn btn--primary">Suscribirse</Link>
+      <Link to="" className="nav__btn btn btn--primary">
+        Suscribirse
+      </Link>
     </div>
   </React.Fragment>
 )
