@@ -11,7 +11,9 @@ const Footer = () => {
       </div>
       <div className="footer__gradient">
         <div className="contact__social">
-          <div className="footer__logo"></div>
+          <Link to="">
+            <img src="atana-logo.svg" alt="átana" className="footer__logo"/>
+          </Link>
           <div className="social__container">
             <p>Siguenos en nuestras redes sociales:</p>
             <Link to="" className="social social--facebook" />
