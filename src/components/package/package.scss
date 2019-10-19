@@ -2,7 +2,6 @@
 
 .package {
   border-radius: 25px;
-  font-family: Poppins;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.15em;
@@ -42,6 +41,10 @@
   font-size: 18px;
   line-height: 27px;
   padding: 27px 27px 95px;
+
+  @media (max-width: 1010px) {
+    padding: 27px 27px 125px;
+  }
 }
 
 .package__features li {
@@ -62,6 +65,10 @@
   padding: 0 0 38px;
   position: relative;
   top: -1px;
+
+  @media (max-width: 1010px) {
+    background-size: cover;
+  }
 }
 
 .package__footer {
@@ -75,8 +82,9 @@
   min-height: 95px;
   width: 100%;
   
-  @media (max-width: 800px) {
-    min-height: 119px;
+  @media (max-width: 1010px) {
+    bottom: -2px;
+    min-height: 125px;
   }
 }
 

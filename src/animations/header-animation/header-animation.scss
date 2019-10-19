@@ -1,0 +1,32 @@
+.container__svg {
+  padding: 25px;
+}
+
+.svg__paragraph {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  max-width: 250px;
+  text-align: center;
+}
+
+#paperplane {
+  path:nth-child(n + 3),
+  path:nth-child(-n + 11) {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 0;
+  }
+}
+
+#stats {
+  stroke-dasharray: 238;
+  stroke-dashoffset: 0;
+  rect:nth-child(-n + 4) {
+    transform: rotate(180deg);
+  }
+  @for $i from 1 through 4 {
+    rect:nth-child(#{$i}) {
+      transform-origin: (58% - 10 * $i) 45%;
+    }
+  }
+}
