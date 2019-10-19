@@ -1,0 +1,12 @@
+#grafica {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 0;
+    rect:nth-child(-n+5) {
+      transform: rotate(180deg);
+    }
+    @for $i from 1 through 5 {
+      rect:nth-child(#{$i}) {
+        transform-origin: (68% - 10 * $i) 45%;
+      }
+    }
+  }
