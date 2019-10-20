@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+
+.package {
+  border-radius: 25px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  max-width: 381px;
+  margin: 15px;
+
+  @media (max-width: 800px) {
+    border-radius: 25px;
+    margin: 40px auto;
+  }
+}
+
+.package__title {
+  color: $black;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.package__type {
+  font-size: 25px;
+  line-height: 37px;
+  padding: 0;
+  text-align: center;
+}
+
+.package__price {
+  color: #ffffff;
+  font-size: 45px;
+  text-align: center;
+}
+
+.package__features {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 27px 27px 95px;
+
+  @media (max-width: 1010px) {
+    padding: 27px 27px 125px;
+  }
+}
+
+.package__features li {
+  border-top: 1px solid $white;
+  padding: 20px 0;
+}
+
+.package__body {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.package__head {
+  background-size: contain;
+  background-image: url(../../images/svg/package-vector-top.svg);
+  background-repeat: no-repeat;
+  padding: 0 0 38px;
+  position: relative;
+  top: -1px;
+
+  @media (max-width: 1010px) {
+    background-size: cover;
+  }
+}
+
+.package__footer {
+  background-size: cover;
+  background-image: url(../../images/svg/package-vector-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  min-height: 95px;
+  width: 100%;
+  
+  @media (max-width: 1010px) {
+    bottom: -2px;
+    min-height: 125px;
+  }
+}
+
+.package__btn {
+  bottom: 0;
+  left: 0;
+  margin: 10px auto;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  width: max-content;
+}
+
+.package--basic {
+  background-color: $purple;
+}
+
+.package--standard {
+  background-color: $pink;
+}
+
+.package--premium {
+  background-color: $orange;
+}
