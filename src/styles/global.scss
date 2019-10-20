@@ -11,10 +11,6 @@
 body {
   font-family: "poppins", Arial, Helvetica, sans-serif;
   letter-spacing: 0.15em;
-
-  @media screen and (max-width: 400px) {
-    width: fit-content;
-  }
 }
 
 h1 {
@@ -76,4 +72,4 @@ svg {
   margin: 0 auto;
   max-width: $layoutSize;
   padding: 0 30px;
- }
+}
