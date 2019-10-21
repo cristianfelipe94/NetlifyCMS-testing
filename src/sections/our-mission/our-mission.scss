@@ -51,6 +51,55 @@ $paper-plane-top: 330px;
   }
 }
 
+.cta {
+  background: #fff2;
+  display: grid;
+  height: 400px;
+  padding-top: 150px;
+  place-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.cta__btn {
+  background: $white;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 40px 30px #0004;
+  color: $purple;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 25px 10vw;
+  text-transform: uppercase;
+}
+
+.cta__paper-plane {
+  animation: wave 4s ease-in-out infinite;
+  background-image: url("../../images/svg/paperplane.svg");
+  height: 30px;
+  left: calc(20% - 81px);
+  top: $paper-plane-top;
+  width: 81px;
+}
+
+.cta__paper-plane--dark {
+  content: "";
+  animation: waveBlur 4s ease-in-out infinite;
+  background-image: url("../../images/svg/dark-paperplane.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  filter: blur(3.5px);
+  height: 40px;
+  left: calc(20% - 81px);
+  opacity: 0.45;
+  position: absolute;
+  top: $paper-plane-top + 50px;
+  transform: rotateX(180deg);
+  width: 81px;
+}
+
 .light-bulb {
   background-image: url("../../images/svg/lightbulb.svg");
 
@@ -69,7 +118,7 @@ $paper-plane-top: 330px;
 }
 
 .our-mission {
-  background: linear-gradient(to top, $black, $purple);
+  background: linear-gradient(to bottom, $black, $purple);
   overflow-x: hidden;
   position: relative;
 }
