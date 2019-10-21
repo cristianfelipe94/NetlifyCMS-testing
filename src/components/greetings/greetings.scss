@@ -2,7 +2,11 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 65px 0;
+  padding-top: 50px;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 .greetings__text {
