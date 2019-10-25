@@ -1,5 +1,8 @@
 import React from "react"
 import "./info-card.scss"
+import Comunicado from "../../animations/comunicado/comunicado"
+import Media from "../../animations/media/media"
+import Graphic from "../../animations/graphic/graphic"
 
 const InfoCard = ({
   title,
