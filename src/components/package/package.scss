@@ -5,22 +5,13 @@
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.15em;
-  max-width: 381px;
-  margin: 15px;
+  margin: 40px auto;
+  max-width: 300px;
 
-  @media (max-width: 800px) {
-    border-radius: 25px;
-    margin: 40px auto;
+  @media (min-width: 700px) {
+    margin: 15px;
+    max-width: 381px;
   }
-}
-
-.package__title {
-  color: $black;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 45px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .package__type {
@@ -36,15 +27,25 @@
   text-align: center;
 }
 
-.package__features {
+.package__features--desktop {
   color: #ffffff;
   font-size: 18px;
   line-height: 27px;
   padding: 27px 27px 95px;
+}
 
-  @media (max-width: 1010px) {
-    padding: 27px 27px 125px;
-  }
+.package__features--mobile {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 27px 27px 125px;
+  transition: 1.8ms;
+}
+
+.package__features {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .package__features li {
@@ -58,16 +59,40 @@
   z-index: 1;
 }
 
+.package__body--close {
+  height: 60px;
+  overflow: hidden;
+
+  .package__btn {
+    position: relative;
+  }
+}
+
+.package__body--open {
+  height: 100%;
+  overflow: unset;
+  position: relative;
+
+  .package__btn {
+    position: absolute;
+  }
+
+  @media (min-width: 700px) {
+    position: unset;
+  }
+}
+
 .package__head {
-  background-size: contain;
+  background-size: cover;
   background-image: url(../../images/svg/package-vector-top.svg);
   background-repeat: no-repeat;
-  padding: 0 0 38px;
+  padding: 0 0 55px;
   position: relative;
   top: -1px;
 
-  @media (max-width: 1010px) {
-    background-size: cover;
+  @media (min-width: 700px) {
+    background-size: contain;
+    padding: 0 0 82px;
   }
 }
 
@@ -100,12 +125,41 @@
 
 .package--basic {
   background-color: $purple;
+
+  .package__btn--seemore {
+    color:$purple;
+  }
 }
 
 .package--standard {
   background-color: $pink;
+
+  .package__btn--seemore {
+    color: $pink;
+  }
 }
 
 .package--premium {
   background-color: $orange;
+
+  .package__btn--seemore {
+    color: $orange;
+  }
+}
+
+.btn--seemore {
+  border-radius: 5px;
+  border: none;
+  display: block;
+  font-family: $mainFont;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.15em;
+  padding: 8px 0 19px;
+  width: 100%;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
 }

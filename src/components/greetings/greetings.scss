@@ -1,18 +1,24 @@
 .contact__greetings {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 50px;
 
-  @media only screen and (max-width: 700px) {
-    flex-direction: column;
+  @media only screen and (min-width: 700px) {
+    flex-direction: row;
   }
 }
 
 .greetings__text {
   display: inline-block;
   padding: 25px;
-  width: 70%;
+  text-align: center;
+  width: 90%;
+
+  @media only screen and (min-width: 700px) {
+    text-align: unset;
+    width: 70%;
+  }
 }
 
 .greetings__text > :first-child{

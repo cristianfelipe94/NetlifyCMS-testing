@@ -9,7 +9,7 @@ export default () => {
     {
       title: "Creación y correción de estilos",
       paragraph:
-        "Revisamos los comunicados de prensa y recomendamos cambios previo al envío.",
+        "De manera ágil revisamos sus comunicaciones para la prensa y recomendamos mejoras previo al envío.",
       id: "comunicado",
       link: "Crea un comunicado >",
       src: "comunicado.svg",
@@ -19,7 +19,7 @@ export default () => {
       modifier: "container--reverse",
       title: "Distribución automatizada",
       paragraph:
-        "Envíamos a medios y periodistas de acuerdo al público meta y la categoría.",
+        "Enviamos a medios de comunicación, periodistas, influenciadores, líderes de opinión de acuerdo a intereses segmentados.",
       id: "media",
       link: "Crea un comunicado >",
       src: "media.svg",
