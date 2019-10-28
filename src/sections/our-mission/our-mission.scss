@@ -59,7 +59,9 @@ $paper-plane-top: 330px;
   box-shadow: 0 40px 30px #0004;
   font-weight: bold;
   font-size: 20px;
+  height: fit-content;
   letter-spacing: 2px;
+  margin: auto;
   max-width: fit-content;
   text-transform: uppercase;
   padding: 25px;
@@ -76,8 +78,8 @@ $paper-plane-top: 330px;
   width: 81px;
 
   @media (min-width: 700px) {
-    right: 500px;
-    top: 330px;
+    right: 400px;
+    top: 345px;
   }
 }
 
@@ -100,8 +102,8 @@ $paper-plane-top: 330px;
   width: 81px;
 
   @media (min-width: 700px) {
-    right: 500px;
-    top: 340px;
+    right: 400px;
+    top: 346px;
   }
 }
 
@@ -208,10 +210,9 @@ $paper-plane-top: 330px;
 }
 
 .cta {
-  display: grid;
+  display: flex;
   height: 400px;
   padding-top: 150px;
-  place-content: center;
   position: relative;
   width: 100%;
 }
