@@ -2,25 +2,18 @@
 
 .package {
   border-radius: 25px;
+  display: flex;
   font-style: normal;
   font-weight: normal;
+  flex-direction: column;
   letter-spacing: 0.15em;
-  max-width: 381px;
-  margin: 15px;
+  margin: 40px auto;
+  max-width: 300px;
 
-  @media (max-width: 800px) {
-    border-radius: 25px;
-    margin: 40px auto;
+  @media screen and (min-width: 700px) {
+    margin: 15px;
+    max-width: 381px;
   }
-}
-
-.package__title {
-  color: $black;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 45px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .package__type {
@@ -37,13 +30,13 @@
 }
 
 .package__features {
-  color: #ffffff;
+  color: $white;
   font-size: 18px;
   line-height: 27px;
-  padding: 27px 27px 95px;
+  padding: 27px 27px 125px;
 
-  @media (max-width: 1010px) {
-    padding: 27px 27px 125px;
+  @media screen and (min-width: 700px) {
+    padding: 27px 27px 95px;
   }
 }
 
@@ -53,38 +46,32 @@
 }
 
 .package__body {
-  height: 100%;
+  height: 0px;
   position: relative;
-  z-index: 1;
-}
+  overflow: hidden;
 
-.package__head {
-  background-size: contain;
-  background-image: url(../../images/svg/package-vector-top.svg);
-  background-repeat: no-repeat;
-  padding: 0 0 38px;
-  position: relative;
-  top: -1px;
-
-  @media (max-width: 1010px) {
-    background-size: cover;
+  @media screen and (min-width: 700px) {
+    height: 100%;
+    overflow: visible;
   }
 }
 
-.package__footer {
+.package__body--open {
+  height: 100%;
+  overflow: visible;
+}
+
+.package__head {
   background-size: cover;
-  background-image: url(../../images/svg/package-vector-bottom.svg);
+  background-image: url(../../images/svg/package-vector-top.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  min-height: 95px;
-  width: 100%;
-  
-  @media (max-width: 1010px) {
-    bottom: -2px;
-    min-height: 125px;
+  padding: 0 0 55px;
+  position: relative;
+  top: -1px;
+
+  @media screen and (min-width: 700px) {
+    background-size: contain;
+    padding: 0 0 82px;
   }
 }
 
@@ -100,12 +87,43 @@
 
 .package--basic {
   background-color: $purple;
+
+  .package__btn--seemore {
+    color:$purple;
+  }
 }
 
 .package--standard {
   background-color: $pink;
+
+  .package__btn--seemore {
+    color: $pink;
+  }
 }
 
 .package--premium {
   background-color: $orange;
+
+  .package__btn--seemore {
+    color: $orange;
+  }
+}
+
+.btn--seemore {
+  background-color: $white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  font-family: $mainFont;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.15em;
+  padding: 8px 0 19px;
+  width: 100%;
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
 }

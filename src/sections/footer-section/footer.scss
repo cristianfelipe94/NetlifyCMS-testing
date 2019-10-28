@@ -22,7 +22,7 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 30px;
+    padding: 60px 30px;
   }
 }
 
@@ -30,11 +30,11 @@
   width: 50%;
   text-align: center;
   
-  @media only screen and (min-width: 400px) {
+  @media screen and (min-width: 400px) {
     width: 50%;
   }
 
-  @media only screen and (min-width: 700px) {
+  @media screen and (min-width: 700px) {
     width: 33%;
   }
 }

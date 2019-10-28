@@ -15,7 +15,7 @@ const Footer = () => {
             <img src="atana-logo.svg" alt="Átana" className="footer__logo" />
           </Link>
           <div className="social__container">
-            <p>Siguenos en nuestras redes sociales:</p>
+            <p>Síguenos en nuestras redes sociales:</p>
             <Link to="" className="social social--facebook" />
             <Link to="" className="social social--instagram" />
             <Link to="" className="social social--whatsapp" />

@@ -25,7 +25,15 @@ const InfoCard = ({
       </div>
 
       <div className="container__animation" id={id}>
-        {Animation ? <Animation /> : <img className={id} src={src} />}
+        {Animation ? (
+          <Animation />
+        ) : (
+          <img
+            className={id}
+            src={src}
+            alt="Átana cuenta con grandes beneficios."
+          />
+        )}
       </div>
     </div>
   )
