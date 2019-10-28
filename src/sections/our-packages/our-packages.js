@@ -5,7 +5,7 @@ const packagesData = require("../../components/package/package-data.json")
 
 export default () => {
   const bundle = packagesData.bundles.map((bundle, id) => {
-    return <Package data={bundle} key={`${bundle}-${id}`} />
+    return <Package data={bundle} key={`bundle-${id}`} />
   })
 
   return (

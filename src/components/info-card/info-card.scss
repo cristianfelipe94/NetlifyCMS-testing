@@ -7,7 +7,7 @@
   padding-top: 90px;
   padding-bottom: 90px;
 
-  @media (min-width: $medium) {
+  @media screen and (min-width: $medium) {
     align-items: center;
     flex-direction: row;
   }
@@ -16,7 +16,7 @@
 .container__animation {
   margin: 0 auto;
   
-  @media (min-width: $medium) {
+  @media screen and (min-width: $medium) {
     margin: none;
   }
 }
@@ -30,11 +30,11 @@
   text-align: center;
   width: 281px;
 
-  @media (min-width: $medium) {
+  @media screen and (min-width: $medium) {
     text-align: left;
   }
 
-  @media (min-width: $large) {
+  @media screen and (min-width: $large) {
     height: 334px;
     width: 580px;
   }
@@ -43,7 +43,7 @@
 .container--reverse {
   flex-direction: column-reverse;
 
-  @media (min-width: $medium) {
+  @media screen and (min-width: $medium) {
     flex-direction: row-reverse;
   }
 }
@@ -52,7 +52,7 @@
   font-size: 12px;
   padding-bottom: 15px;
 
-  @media (min-width: $large) {
+  @media screen and (min-width: $large) {
     font-size: 27px;
   }
 }
@@ -67,7 +67,7 @@
   font-size: 12px;
   text-decoration: underline;
 
-  @media (min-width: $medium) {
+  @media screen and (min-width: $medium) {
     font-size: 18px;
   }
 }

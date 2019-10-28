@@ -77,7 +77,7 @@ $paper-plane-top: 330px;
   margin: 0 auto;
   width: 81px;
 
-  @media (min-width: 700px) {
+  @media screen and (min-width: 700px) {
     right: 400px;
     top: 345px;
   }
@@ -101,7 +101,7 @@ $paper-plane-top: 330px;
   top: 440px;
   width: 81px;
 
-  @media (min-width: 700px) {
+  @media screen and (min-width: 700px) {
     right: 400px;
     top: 346px;
   }
@@ -145,15 +145,15 @@ $paper-plane-top: 330px;
   margin-top: -200px;
   margin-bottom: -70vw;
   width: 100%;
-  @media (min-width: 515px) {
+  @media screen and (min-width: 515px) {
     // this needs to be really specific
     margin-bottom: -45vw;
   }
-  @media (min-width: 625px) {
+  @media screen and (min-width: 625px) {
     // this needs to be really specific
     margin-bottom: -30vw;
   }
-  @media (min-width: 835px) {
+  @media screen and (min-width: 835px) {
     // this needs to be really specific
     margin-bottom: -227px;
   }

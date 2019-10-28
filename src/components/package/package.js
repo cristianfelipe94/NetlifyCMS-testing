@@ -5,10 +5,10 @@ import "./package.scss"
 import "../ComponentButtons/buttons.scss"
 
 const Package = ({ data }) => {
-  const [toggleState, useToggleState] = useState(false)
+  const [toggleState, setToggleState] = useState(false)
 
-  const ToggleHandler = () => {
-    useToggleState(!toggleState)
+  const toggleHandler = () => {
+    setToggleState(!toggleState)
   }
 
   const bundleFeatures = processFeature => {
@@ -36,7 +36,7 @@ const Package = ({ data }) => {
       </div>
       <button
         className="btn--seemore package__btn--seemore"
-        onClick={() => ToggleHandler()}>
+        onClick={() => toggleHandler()}>
         {`${toggleState ? "Ver menos" : "Ver más"}`}
       </button>
     </div>
