@@ -13,18 +13,16 @@ const Header = () => {
           <img src="atana-logo.svg" alt="átana" className="header__logo" />
         </Link>
         <Menu />
-        <div>
-          <h1 className="header__title">
-            <span className="header__title-span">crea y distribuye</span>{" "}
-            comunicados de prensa
+        <h1 className="header__title">
+          <span className="header__title-span">crea y distribuye</span>{" "}
+          comunicados de prensa
           </h1>
-          <p className="header__text">
-            De una manera más fácil, rápida y sencilla.{" "}
-          </p>
-          <Link to="" className="header__btn btn btn--primary">
-            Suscribirse
+        <p className="header__text">
+          De una manera más fácil, rápida y sencilla.{" "}
+        </p>
+        <Link to="" className="header__btn btn btn--primary">
+          Suscribirse
           </Link>
-        </div>
         <div className="header__animation">
           <HeaderAnimation />
         </div>
