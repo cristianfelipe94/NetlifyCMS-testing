@@ -3,10 +3,10 @@
 .container {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-between;
-  padding-top: 90px;
-  padding-bottom: 90px;
   height: 200px;
+  justify-content: space-between;
+  padding-bottom: 90px;
+  padding-top: 90px;
   
   @media screen and (min-width: $medium) {
     align-items: center;
