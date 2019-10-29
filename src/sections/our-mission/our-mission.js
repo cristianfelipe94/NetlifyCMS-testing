@@ -11,8 +11,7 @@ export default () => {
       <div className="section__wrapper">
         <h2 className="our-mission__title">Nuestra misión</h2>
         <p className="our-mission__paragraph">
-          Trasladar ideas valiosas de quienes las crean a quienes pueden darlas
-          a conocer.
+          Trasladar ideas valiosas a quienes puedan darlas a conocer.
         </p>
         <div className="our-mission__svg-group svg-group--spacing">
           <div className="our-mission__svg light-bulb" />
@@ -34,11 +33,11 @@ export default () => {
           <div className="our-mission__svg check" />
         </div>
         <div className="our-mission__logo" />
-      </div>
-      <div className="cta">
-        <div className="our-mission__svg cta__paper-plane--dark" />
-        <div className="our-mission__svg cta__paper-plane" />
-        <button className="cta__btn">Crea tu comunicado</button>
+        <div className="cta">
+          <div className="our-mission__svg cta__paper-plane--dark" />
+          <div className="our-mission__svg cta__paper-plane" />
+          <button className="cta__btn">Crea tu comunicado</button>
+        </div>
       </div>
     </section>
   )

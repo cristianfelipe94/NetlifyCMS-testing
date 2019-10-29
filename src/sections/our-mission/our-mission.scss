@@ -51,36 +51,36 @@ $paper-plane-top: 330px;
   }
 }
 
-.cta {
-  background: #fff2;
-  display: grid;
-  height: 400px;
-  padding-top: 150px;
-  place-content: center;
-  position: relative;
-  width: 100%;
-}
-
 .cta__btn {
   background: $white;
+  color: $purple;
   border: 0;
   border-radius: 5px;
   box-shadow: 0 40px 30px #0004;
-  color: $purple;
   font-weight: bold;
   font-size: 20px;
+  height: fit-content;
   letter-spacing: 2px;
-  padding: 25px 10vw;
+  margin: auto;
+  max-width: fit-content;
   text-transform: uppercase;
+  padding: 25px;
 }
 
 .cta__paper-plane {
   animation: wave 4s ease-in-out infinite;
   background-image: url("../../images/svg/paperplane.svg");
   height: 30px;
-  left: calc(20% - 81px);
-  top: $paper-plane-top;
+  left: 0;
+  right: 0;
+  top: 425px;
+  margin: 0 auto;
   width: 81px;
+
+  @media screen and (min-width: 700px) {
+    right: 400px;
+    top: 345px;
+  }
 }
 
 .cta__paper-plane--dark {
@@ -92,12 +92,19 @@ $paper-plane-top: 330px;
   display: block;
   filter: blur(3.5px);
   height: 40px;
-  left: calc(20% - 81px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   opacity: 0.45;
   position: absolute;
-  top: $paper-plane-top + 50px;
   transform: rotateX(180deg);
+  top: 440px;
   width: 81px;
+
+  @media screen and (min-width: 700px) {
+    right: 400px;
+    top: 346px;
+  }
 }
 
 .light-bulb {
@@ -138,15 +145,15 @@ $paper-plane-top: 330px;
   margin-top: -200px;
   margin-bottom: -70vw;
   width: 100%;
-  @media (min-width: 515px) {
+  @media screen and (min-width: 515px) {
     // this needs to be really specific
     margin-bottom: -45vw;
   }
-  @media (min-width: 625px) {
+  @media screen and (min-width: 625px) {
     // this needs to be really specific
     margin-bottom: -30vw;
   }
-  @media (min-width: 835px) {
+  @media screen and (min-width: 835px) {
     // this needs to be really specific
     margin-bottom: -227px;
   }
@@ -203,50 +210,9 @@ $paper-plane-top: 330px;
 }
 
 .cta {
-  position: relative;
-  width: 100%;
+  display: flex;
   height: 400px;
   padding-top: 150px;
-  display: grid;
-  place-content: center;
-  background: #fff2;
-}
-
-.cta__paper-plane {
-  background-image: url("../../images/svg/paperplane.svg");
-  height: 30px;
-  left: calc(20% - 81px);
-  top: $paper-plane-top;
-  width: 81px;
-  animation: wave 4s ease-in-out infinite;
-}
-
-.cta__paper-plane--dark {
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url("../../images/svg/dark-paperplane.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 40px;
-  left: calc(20% - 81px);
-  top: $paper-plane-top + 50px;
-  width: 81px;
-  transform: rotateX(180deg);
-  opacity: 0.45;
-  filter: blur(3.5px);
-  animation: waveBlur 4s ease-in-out infinite;
-}
-
-.cta__btn {
-  background: $white;
-  color: $purple;
-  border: 0;
-  padding: 25px 10vw;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  border-radius: 5px;
-  box-shadow: 0 40px 30px #0004;
+  position: relative;
+  width: 100%;
 }

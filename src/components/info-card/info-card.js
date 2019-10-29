@@ -1,5 +1,8 @@
 import React from "react"
 import "./info-card.scss"
+import Comunicado from "../../animations/comunicado/comunicado"
+import Media from "../../animations/media/media"
+import Graphic from "../../animations/graphic/graphic"
 
 const InfoCard = ({
   title,
@@ -22,7 +25,15 @@ const InfoCard = ({
       </div>
 
       <div className="container__animation" id={id}>
-        {Animation ? <Animation /> : <img className={id} src={src} />}
+        {Animation ? (
+          <Animation />
+        ) : (
+          <img
+            className={id}
+            src={src}
+            alt="Átana cuenta con grandes beneficios."
+          />
+        )}
       </div>
     </div>
   )

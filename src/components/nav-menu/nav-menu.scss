@@ -1,23 +1,36 @@
 @import "../../styles/variables.scss";
 
-.nav__menu {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 100px;
-  margin-top: -59px;
+.nav__btn {
+  height: 30px;
+  text-decoration: none;
 }
 
 .nav__link {
   border-bottom: 1px solid $white;
   color: $white;
   font-weight: bold;
-  margin-right: 20px;
+  margin-bottom: 12px;
   margin-top: 24px;
   text-decoration: none;
   text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
 }
 
-.nav__btn {
-  height: 30px;
-  text-decoration: none;
+.nav__menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-top: -59px;
+  }
 }
+
+
