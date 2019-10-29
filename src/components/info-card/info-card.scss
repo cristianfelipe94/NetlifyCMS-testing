@@ -4,18 +4,20 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   @media screen and (min-width: $medium) {
     align-items: center;
     flex-direction: row;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 
 .container__animation {
   margin: 0 auto;
-  
+
   @media screen and (min-width: $medium) {
     margin: none;
   }
@@ -62,7 +64,7 @@
   width: 100%;
 }
 
-.info__link{
+.info__link {
   color: $pink;
   font-size: 12px;
   text-decoration: underline;
