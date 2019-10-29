@@ -6,7 +6,8 @@
   justify-content: space-between;
   padding-top: 90px;
   padding-bottom: 90px;
-
+  height: 200px;
+  
   @media screen and (min-width: $medium) {
     align-items: center;
     flex-direction: row;

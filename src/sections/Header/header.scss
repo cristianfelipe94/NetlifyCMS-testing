@@ -32,6 +32,17 @@
   }
 }
 
+.header__animation{
+  display: none; 
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  justify-content: flex-end;
+  margin-top: -388px;
+  }
+}
+
+
 .header__btn {
   display: none;
 
