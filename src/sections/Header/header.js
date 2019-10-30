@@ -1,9 +1,10 @@
 import React from "react"
-import "./header.scss"
 import "../../components/ComponentButtons/buttons.scss"
 import Menu from "../../components/nav-menu/nav-menu"
 import header from "../../animations/header-animation/header-animation"
 import { Link } from "gatsby"
+import "./header.scss"
+
 const Header = () => {
   const HeaderAnimation = header();
   return (
