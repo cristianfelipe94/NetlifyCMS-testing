@@ -1,11 +1,11 @@
 @import "../../styles/variables.scss";
 
-.container {
+.container--card  {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   padding: 50px 0;
-
+  
   @media screen and (min-width: $medium) {
     align-items: center;
     flex-direction: row;
