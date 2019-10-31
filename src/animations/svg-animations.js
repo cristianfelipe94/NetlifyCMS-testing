@@ -13,6 +13,7 @@ export default function svgAnimations(animations, base) {
     fetch(src)
       .then(res => res.text())
       .then(svg => {new TimelineMax();
+        parent.style.display = 'none'; 
         parent.innerHTML = svg + parent.innerHTML;
         return !i ? animations[txt](`#${txt}`, new TimelineMax()) : null;
       })
