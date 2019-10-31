@@ -32,6 +32,16 @@
   }
 }
 
+.header__animation {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -388px;
+  }
+}
+
 .header__btn {
   display: none;
 
@@ -42,10 +52,14 @@
 }
 
 .header__logo {
-  margin-top: 50px;
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 67%;
 
   @media screen and (min-width: 768px) {
+    margin: 0;
+    padding-top: 30px;
     width: 12%;
   }
 }
@@ -67,7 +81,7 @@
   padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
-  
+
   @media screen and (min-width: 768px) {
     margin-bottom: 20px;
     text-align: left;
@@ -88,4 +102,3 @@
 .header__title--color-white {
   color: $white;
 }
-
