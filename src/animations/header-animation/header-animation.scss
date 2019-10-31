@@ -16,8 +16,7 @@
 }
 
 #paperplane {
-  path:nth-child(n + 3),
-  path:nth-child(-n + 11) {
+  path:nth-child(n + 3):nth-child(-n + 11) {
     stroke-dasharray: 30;
     stroke-dashoffset: 0;
   }
