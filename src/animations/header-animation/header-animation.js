@@ -13,7 +13,7 @@ const animations = {
   },
   paperplane(s, tl) {
     tl.set(s, { display: "block" })
-      .from(s, 1, { opacity: 0})
+      .from(s, 1, { opacity: 0 })
       .staggerFrom(
         `${s} path:nth-child(n+3):nth-child(-n+11)`,
         0.2,
