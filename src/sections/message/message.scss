@@ -9,6 +9,21 @@
     text-align: center;
 }
 
+.message_info{
+    font-size: 12px;
+    max-width: 280px;
+    
+    @media screen and (min-width: $medium) {
+        font-size: 20px;
+        max-width: 645px;
+    }
+
+    @media screen and (min-width: $large){
+        font-size: 25px;
+        max-width: 900px;
+    }
+}
+
 .message_image{
     margin: 70px 0;
     max-width: 160px;
@@ -30,20 +45,5 @@
     }
     @media screen and (min-width: $large){
         font-size: 30px;
-    }
-}
-
-.message_info{
-    font-size: 12px;
-    max-width: 280px;
-    
-    @media screen and (min-width: $medium) {
-        font-size: 20px;
-        max-width: 645px;
-    }
-
-    @media screen and (min-width: $large){
-        font-size: 25px;
-        max-width: 900px;
     }
 }
