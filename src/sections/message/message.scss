@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.message_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message_image{
+    margin: 70px 0;
+    max-width: 160px;
+
+    @media screen and (min-width: $medium) {
+        max-width: 257px;
+    }
+    @media screen and (min-width: $large){
+        max-width: 464px;
+    }
+}
+
+.message_title{
+    padding-bottom: 22px;
+    font-size: 16px;
+    @media screen and (min-width: $medium) {
+        font-size: 28px;
+    }
+    @media screen and (min-width: $large){
+        font-size: 30px;
+    }
+}
+
+.message_info{
+    font-size: 12px;
+    max-width: 280px;
+    
+    @media screen and (min-width: $medium) {
+        font-size: 20px;
+        max-width: 645px;
+    }
+
+    @media screen and (min-width: $large){
+        font-size: 25px;
+        max-width: 900px;
+    }
+}
