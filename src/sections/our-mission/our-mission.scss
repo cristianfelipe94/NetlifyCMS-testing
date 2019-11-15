@@ -223,6 +223,7 @@ $paper-plane-top: 330px;
     left: 30%;
     top: 50px;
     width: 100%;
+    transform: rotate(0deg);
   }
 }
 
@@ -232,12 +233,13 @@ $paper-plane-top: 330px;
   max-height: 295px;
   max-width: 295px;
   left: 73%;
-  width: 58vw;
   top: 141px;
-
+  width: 58vw;
+  
   @media screen and (min-width: 700px) {
     height: 17vw;
     left: 76%;
+    top: 14px;
     width: 30vw;
   }
 }
