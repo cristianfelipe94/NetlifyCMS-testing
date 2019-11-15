@@ -78,7 +78,7 @@ $paper-plane-top: 330px;
   width: 81px;
 
   @media screen and (min-width: 700px) {
-    right: 400px;
+    right: 470px;
     top: 345px;
   }
 }
@@ -102,7 +102,7 @@ $paper-plane-top: 330px;
   width: 81px;
 
   @media screen and (min-width: 700px) {
-    right: 400px;
+    right: 470px;
     top: 346px;
   }
 }
@@ -117,8 +117,8 @@ $paper-plane-top: 330px;
 
   &:nth-child(2) {
     height: 87px;
-    left: 135px;
-    top: 100px;
+    left: 110px;
+    top: 127px;
     transform: rotate(40deg);
     width: 87px;
   }
@@ -189,24 +189,24 @@ $paper-plane-top: 330px;
 }
 
 .paper-plane {
-  background-image: url("../../images/svg/paperplane.svg");
-  height: 30px;
+  background-image: url("../../images/svg/planes.svg");
+  height: 40%;
   left: 30%;
   top: 50px;
-  width: 81px;
+  width: 100%;
 }
 
 .planet {
   background-image: url("../../images/svg/planet.svg");
-  height: 30vw;
+  height: 17vw;
   max-height: 295px;
   max-width: 295px;
-  right: 0;
+  left: 76%;
   width: 30vw;
 }
 
 .svg-group--spacing {
-  margin-bottom: 100px;
+  margin-top: 120px;
 }
 
 .cta {
