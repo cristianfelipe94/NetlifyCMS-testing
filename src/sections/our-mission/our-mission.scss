@@ -111,16 +111,27 @@ $paper-plane-top: 330px;
   background-image: url("../../images/svg/lightbulb.svg");
 
   &:nth-child(1) {
-    height: 135px;
-    width: 135px;
+    height: 60px;
+    width: 60px;
+
+    @media screen and (min-width: 700px) {
+      height: 135px;
+      width: 135px;
+    }
   }
 
   &:nth-child(2) {
-    height: 87px;
-    left: 110px;
-    top: 127px;
+    height: 40px;
+    left: 50px;
+    top: 60px;
     transform: rotate(40deg);
-    width: 87px;
+    width: 50px;
+    @media screen and (min-width: 700px) {
+      height: 87px;
+      left: 110px;
+      top: 127px;
+      width: 87px;
+    }
   }
 }
 
@@ -160,20 +171,31 @@ $paper-plane-top: 330px;
 }
 
 .our-mission__paragraph {
-  font-size: 32px;
+  font-size: 16px;
   margin-bottom: 80px;
+  @media screen and (min-width: 700px){
+    font-size: 32px;
+  }
 }
 
 .our-mission__svg-group {
-  padding-bottom: 300px;
+  padding-bottom: 240px;
   position: relative;
+
+  @media screen and (min-width: 700px){
+    padding-bottom: 300px;
+  }
 }
 
 .our-mission__title {
-  font-size: 40px;
+  font-size: 25px;
   letter-spacing: 0.15em;
-  padding: 190px 0 80px;
+  padding: 100px 0 80px;
   text-transform: uppercase;
+  @media screen and (min-width: 700px){
+    font-size: 40px;
+    padding: 190px 0 80px;
+  }
 }
 
 .our-mission__title,
@@ -191,18 +213,33 @@ $paper-plane-top: 330px;
 .paper-plane {
   background-image: url("../../images/svg/planes.svg");
   height: 40%;
-  left: 30%;
+  left: 27%;
   top: 50px;
-  width: 100%;
+  width: 57%;
+  transform: rotate(29deg);
+
+  @media screen and (min-width: 700px) {
+    height: 40%;
+    left: 30%;
+    top: 50px;
+    width: 100%;
+  }
 }
 
 .planet {
   background-image: url("../../images/svg/planet.svg");
-  height: 17vw;
+  height: 26vw;
   max-height: 295px;
   max-width: 295px;
-  left: 76%;
-  width: 30vw;
+  left: 73%;
+  width: 58vw;
+  top: 141px;
+
+  @media screen and (min-width: 700px) {
+    height: 17vw;
+    left: 76%;
+    width: 30vw;
+  }
 }
 
 .svg-group--spacing {
