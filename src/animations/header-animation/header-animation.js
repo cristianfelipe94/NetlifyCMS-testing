@@ -60,7 +60,7 @@ export default () => {
         <p className="svg__paragraph">Podés crear un comunicado de prensa</p>
       </div>
       <div id="paperplane" className="container__svg">
-        <p className="svg__paragraph">Le daremos seguimieto</p>
+        <p className="svg__paragraph">Le daremos seguimiento</p>
       </div>
       <div id="messages" className="container__svg">
         <p className="svg__paragraph">Se distribuirá automáticamente ...</p>
