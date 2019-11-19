@@ -229,17 +229,17 @@ $paper-plane-top: 330px;
 
 .planet {
   background-image: url("../../images/svg/planet.svg");
-  height: 26vh;
+  height: 18vh;
   max-height: 295px;
   max-width: 295px;
-  left: 54vw;
-  top: 165px;
+  left: 73%;
+  top: 168px;
   width: 35vw;
 
   @media screen and (min-width: 700px) {
-    height: 14vh;
-    left: 76vw;
-    top: 14px;
+    height: 20vh;
+    left: 80%;
+    top: 27px;
     width: 30vw;
   }
 }
