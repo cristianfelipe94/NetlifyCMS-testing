@@ -173,7 +173,7 @@ $paper-plane-top: 330px;
 .our-mission__paragraph {
   font-size: 16px;
   margin-bottom: 80px;
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 700px) {
     font-size: 32px;
   }
 }
@@ -182,7 +182,7 @@ $paper-plane-top: 330px;
   padding-bottom: 240px;
   position: relative;
 
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 700px) {
     padding-bottom: 300px;
   }
 }
@@ -192,7 +192,7 @@ $paper-plane-top: 330px;
   letter-spacing: 0.15em;
   padding: 100px 0 80px;
   text-transform: uppercase;
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 700px) {
     font-size: 40px;
     padding: 190px 0 80px;
   }
@@ -229,16 +229,16 @@ $paper-plane-top: 330px;
 
 .planet {
   background-image: url("../../images/svg/planet.svg");
-  height: 26vw;
+  height: 26vh;
   max-height: 295px;
   max-width: 295px;
-  left: 73%;
-  top: 141px;
-  width: 58vw;
-  
+  left: 54vw;
+  top: 165px;
+  width: 35vw;
+
   @media screen and (min-width: 700px) {
-    height: 17vw;
-    left: 76%;
+    height: 14vh;
+    left: 76vw;
     top: 14px;
     width: 30vw;
   }
