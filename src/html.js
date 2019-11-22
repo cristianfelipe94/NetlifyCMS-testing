@@ -26,7 +26,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <script>
-          if (typeof window !== 'undefined' && window.netlifyIdentity) {
+          if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
               if (!user) {
                 window.netlifyIdentity.on("login", () => {
