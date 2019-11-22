@@ -1,6 +1,6 @@
 import React from "react";
 
-export function onRenderBody ({ setHeadComponents, setPostBodyComponents }) {
+export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   setHeadComponents(
     <script
     type="text/javascript"
@@ -12,9 +12,9 @@ export function onRenderBody ({ setHeadComponents, setPostBodyComponents }) {
     dangerouslySetInnerHTML={{
       __html:`
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", function (user) {
+        window.netlifyIdentity.on("init", (user) => {
           if (!user) {
-            window.netlifyIdentity.on("login", function () {
+            window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
             })
           }
