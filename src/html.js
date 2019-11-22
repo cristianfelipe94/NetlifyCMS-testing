@@ -19,8 +19,14 @@ export default function HTML(props) {
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
         </noscript>
+        <div
+          key={`body`}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+        {props.postBodyComponents}
         <script>
-          if (window.netlifyIdentity) {
+          if (typeof window !== 'undefined' && window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
               if (!user) {
                 window.netlifyIdentity.on("login", () => {
@@ -30,12 +36,6 @@ export default function HTML(props) {
             })
           }
         </script>
-        <div
-          key={`body`}
-          id="___gatsby"
-          dangerouslySetInnerHTML={{ __html: props.body }}
-        />
-        {props.postBodyComponents}
       </body>
     </html>
   )
