@@ -20,3 +20,15 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Mainpitch",name: "mainpitch", widget: object, fields: [{label: "Image", name: "image", widget: "img"}, {label: "Text", name: "text", widget: "text"}, {label: "Text", name: "text", widget: "text"}, {label: "Text", name: "text", widget: "text"}]}
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+    preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
