@@ -3,20 +3,21 @@ exports.createPages = ({ actions, graphql }) => {
   console.log("Function: ", createPage);
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            frontmatter {
-              templateKey
+      query MyQuery{
+        allMarkdownRemark {
+          edges {
+            node {
+              id
+              html
+              frontmatter {
+                date
+                description
+                title
+              }
             }
-            fields {
-              slug
-            }
-          } 
+          }
         }
       }
-    }
   `).then((query => {
     console.log("Result is: ", query)
   })).catch(err => {
