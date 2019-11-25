@@ -1,6 +1,10 @@
-// import React from "react"
+import React from "react"
 // import { StaticQuery, graphql } from "gatsby"
-
+const Blog = () => {
+  return (
+    <h1>Blog</h1>
+  )
+}
 // const Blog = () => (
 //   <StaticQuery
 //     query={
@@ -41,4 +45,4 @@
 //   ></StaticQuery>
 // )
 
-// export default Blog
+export default Blog
