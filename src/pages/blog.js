@@ -8,8 +8,9 @@ const Blog = () => (
         allMarkdownRemark {
           edges {
             node {
+              html
               frontmatter {
-                date
+                date (formatString: "DD MMMM, YYYY")
                 description
                 title
               }
@@ -19,12 +20,14 @@ const Blog = () => (
       }
     `}
     render={(data) => {
+      console.log(data)
       const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
         return (
-          <div>
+          <div key={`${post.node.frontmatter.title}-${post.node.frontmatter.date}`}>
             <h2>{post.node.frontmatter.title}</h2>
             <p>{post.node.frontmatter.description}</p>
             <p>{post.node.frontmatter.date}</p>
+            <div dangerouslySetInnerHTML={{__html: post.node.html}}/>
           </div>
         )
       })
