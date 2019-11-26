@@ -40,5 +40,4 @@ const Blog = () => (
     }}
   ></StaticQuery>
 )
-
 export default Blog
