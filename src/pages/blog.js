@@ -33,7 +33,7 @@ const Blog = () => (
       })
       return (
         <div>
-          <h2>Ultimas noticias de Átana</h2>
+          <h2>Ultimas noticias de Átana.</h2>
           {parsedPosts}
         </div>
       )
