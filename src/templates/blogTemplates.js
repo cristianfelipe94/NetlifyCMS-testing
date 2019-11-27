@@ -7,8 +7,9 @@ const postTemplate = ({data}) => {
     <div key={`${frontmatter.title}-${frontmatter.date}`}>
       <h2>{frontmatter.title}</h2>
       <p>{frontmatter.description}</p>
-      <p>{frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{__html: html}}/>
+      <p>Creado por: <span>{frontmatter.author}</span></p>
+      <p>Fecha de creación: <span>{frontmatter.date}</span></p>
     </div>
   )
 }

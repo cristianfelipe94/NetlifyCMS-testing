@@ -9,7 +9,7 @@ const Blog = () => (
         allMarkdownRemark {
           edges {
             node {
-              html
+              excerpt(pruneLength: 100)
               frontmatter {
                 date (formatString: "YYYY-MM-DD")
                 title
@@ -23,14 +23,15 @@ const Blog = () => (
 
     render={(data) => {
       const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
-        const {html, frontmatter} = post.node;
-        const path = `/${frontmatter.title}`;
+        const {frontmatter, excerpt} = post.node;
+        const cleanPath = frontmatter.title.replace(/\s/g, "-");
+        const path = `/${cleanPath}`;
         return (
           <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
             <h2>{frontmatter.title}</h2>
-            <p>{frontmatter.description}</p>
-            <p>{frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html: html}}/>
+            <p>{excerpt}</p>
+            <p>Esta publicación fue creada: <span>{frontmatter.date}</span></p>
+            <p>Esta publicación fue creada por: <span>{frontmatter.author}</span></p>
           </Link>
         )
       })
