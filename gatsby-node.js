@@ -1,36 +1,30 @@
 const path = require('path');
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const postTemplate = path.resolve('src/templates/blogTemplates.js')
-  return graphql(`
+  const request = await graphql (`
     {
-      query {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                title
-                date
-              }
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
             }
           }
         }
       }
-  `).then((query => {
-    if (query.errors) {
-      return Promise.reject
-    } else {
-      query.data.allMarkdownRemark.edges.forEach(element => {
-        const titlePost = element.node.frontmatter.title;
-        const lowerTitle =  titlePost.toLowerCase();
-        const clearTitle = lowerTitle.replace(/\s/g, "-")
-        const pathFormated = `/${element.node.frontmatter.date}-${clearTitle}`;
-        createPage({
-          path: pathFormated,
-          component: postTemplate
-        })
-      });
     }
-  }))
+  `)
+  if(request.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  } else {
+    request.data.allMarkdownRemark.edges.forEach(({node}) => {
+      createPage({
+        path: node.frontmatter.title,
+        component: postTemplate
+      })
+    });
+  }
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "gatsby"
+import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
 
 const Blog = () => (
@@ -12,27 +12,25 @@ const Blog = () => (
               html
               frontmatter {
                 date (formatString: "YYYY-MM-DD")
-                description
                 title
-                path
+                author
               }
             }
           }
         }
       }
     `}
+
     render={(data) => {
       const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
-        const titlePost = post.node.frontmatter.title;
-        const lowerTitle =  titlePost.toLowerCase();
-        const clearTitle = lowerTitle.replace(/\s/g, "-")
-        const path = `/${post.node.frontmatter.date}-${clearTitle}`;
+        const {html, frontmatter} = post.node;
+        const path = `/${frontmatter.title}`;
         return (
-          <Link to={path} key={`${post.node.frontmatter.title}-${post.node.frontmatter.date}`}>
-            <h2>{post.node.frontmatter.title}</h2>
-            <p>{post.node.frontmatter.description}</p>
-            <p>{post.node.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html: post.node.html}}/>
+          <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
+            <h2>{frontmatter.title}</h2>
+            <p>{frontmatter.description}</p>
+            <p>{frontmatter.date}</p>
+            <div dangerouslySetInnerHTML={{__html: html}}/>
           </Link>
         )
       })
