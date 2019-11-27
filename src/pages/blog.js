@@ -14,6 +14,7 @@ const Blog = () => (
                 date (formatString: "YYYY-MM-DD")
                 title
                 author
+                path
               }
             }
           }
@@ -26,7 +27,7 @@ const Blog = () => (
         const {frontmatter, excerpt} = post.node;
         const cleanPath = frontmatter.title.replace(/\s/g, "-");
         const formatedPath = cleanPath.toLowerCase();
-        const path = `/${formatedPath}`;
+        const path = `/${frontmatter.path}/${formatedPath}`;
         return (
           <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
             <h2>{frontmatter.title}</h2>

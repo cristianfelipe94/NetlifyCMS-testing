@@ -22,8 +22,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   } else {
     request.data.allMarkdownRemark.edges.forEach(({node}) => {
+      const cleanPath = node.frontmatter.title.replace(/\s/g, "-");
+      const lowerPath = cleanPath.toLowerCase();
+      const formatedPath = `/${node.frontmatter.path}/${lowerPath}`;
       createPage({
-        path: node.frontmatter.title,
+        path: formatedPath,
         component: postTemplate,
         context: {
           title: node.frontmatter.title
