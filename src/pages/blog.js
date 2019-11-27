@@ -25,7 +25,8 @@ const Blog = () => (
       const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
         const {frontmatter, excerpt} = post.node;
         const cleanPath = frontmatter.title.replace(/\s/g, "-");
-        const path = `/${cleanPath}`;
+        const formatedPath = cleanPath.toLowerCase();
+        const path = `/${formatedPath}`;
         return (
           <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
             <h2>{frontmatter.title}</h2>
