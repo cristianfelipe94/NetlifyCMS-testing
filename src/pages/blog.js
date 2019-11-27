@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
 
 const Blog = () => (
@@ -10,9 +11,10 @@ const Blog = () => (
             node {
               html
               frontmatter {
-                date (formatString: "DD MMMM, YYYY")
+                date (formatString: "YYYY-MM-DD")
                 description
                 title
+                path
               }
             }
           }
@@ -20,15 +22,18 @@ const Blog = () => (
       }
     `}
     render={(data) => {
-      console.log(data)
       const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
+        const titlePost = post.node.frontmatter.title;
+        const lowerTitle =  titlePost.toLowerCase();
+        const clearTitle = lowerTitle.replace(/\s/g, "-")
+        const path = `/${post.node.frontmatter.date}-${clearTitle}`;
         return (
-          <div key={`${post.node.frontmatter.title}-${post.node.frontmatter.date}`}>
+          <Link to={path} key={`${post.node.frontmatter.title}-${post.node.frontmatter.date}`}>
             <h2>{post.node.frontmatter.title}</h2>
             <p>{post.node.frontmatter.description}</p>
             <p>{post.node.frontmatter.date}</p>
             <div dangerouslySetInnerHTML={{__html: post.node.html}}/>
-          </div>
+          </Link>
         )
       })
       return (
@@ -40,4 +45,5 @@ const Blog = () => (
     }}
   ></StaticQuery>
 )
+
 export default Blog
