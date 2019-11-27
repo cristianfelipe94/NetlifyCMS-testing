@@ -1,35 +1,30 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-const postTemplate = () => (
-  <StaticQuery
-    query = {graphql`
-      query ($title: String!) {
-        markdownRemark(frontmatter: {title: {eq: $title}}) {
-          html
-          frontmatter {
-            title
-            author
-            date (formatString: "YYYY-MM-DD")
-            description
-          }
-        }
+const postTemplate = ({data}) => {
+  const {frontmatter, html} = data.markdownRemark;
+  return (
+    <div key={`${frontmatter.title}-${frontmatter.date}`}>
+      <h2>{frontmatter.title}</h2>
+      <p>{frontmatter.description}</p>
+      <p>{frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{__html: html}}/>
+    </div>
+  )
+}
+
+export const query = graphql`
+  query ($title: String!) {
+    markdownRemark(frontmatter: {title: {eq: $title}}) {
+      html
+      frontmatter {
+        title
+        author
+        date (formatString: "YYYY-MM-DD")
+        description
       }
-    `}
-  
-    render={(data) => {
-      const {markdownRemark} = data;
-      const {html, frontmatter} = markdownRemark; 
-      return (
-        <div key={`${frontmatter.title}-${frontmatter.date}`}>
-          <h2>{frontmatter.title}</h2>
-          <p>{frontmatter.description}</p>
-          <p>{frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{__html: html}}/>
-        </div>
-      )
-    }}
-  />
-)
+    }
+  }
+`
 
 export default postTemplate
