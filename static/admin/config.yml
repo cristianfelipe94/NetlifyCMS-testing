@@ -12,6 +12,7 @@ public_folder: "uploads"
 collections:
   - label: "Blog"
     name: "blog"
+    identifier_field: "blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{slug}}"
@@ -24,9 +25,11 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
   - label: "Landing-Page"
     name: "landing"
+    identifier_field: "landing-page"
     files:
       - label: "Slogan"
         name: "slogan"
+        identifier_field: "slogan"
         file: "src/pages/landing.yml"
         fields:
           - { label: "Intro-slogan", name: "intro", widget: "string", default: "Crea y distribuye"}
