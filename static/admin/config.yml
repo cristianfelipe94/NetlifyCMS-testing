@@ -28,7 +28,6 @@ collections:
       - label: "Slogan"
         name: "slogan"
         file: "src/pages/landing.yml"
-        widget: "object"
         fields:
           - { label: "Intro-slogan", name: "intro", widget: "string", default: "Crea y distribuye"}
           - { label: "Mid-slogan", name: "mid", widget: "string", default: "Comunicados de prensa"}
