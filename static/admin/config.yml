@@ -24,12 +24,10 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
   - label: "Landing-Page"
     name: "landing"
-    folder:  "src/pages/landing"
-    create: true
-    slug: "{{slug}}"
-    fields:
+    files:
       - label: "Slogan"
         name: "slogan"
+        file: "src/pages/landing.yml"
         widget: "object"
         fields:
           - { label: "Intro-slogan", name: "intro", widget: "string", default: "Crea y distribuye"}
