@@ -27,11 +27,38 @@ collections:
     name: "landing"
     identifier_field: "landing"
     files:
-      - label: "Slogan"
-        name: "slogan"
-        identifier_field: "slogan"
+      - label: "Head"
+        name: "head"
+        identifier_field: "head"
         file: "src/pages/landing/landing.md"
         fields:
-          - { label: "Intro-slogan", name: "intro", widget: "string", default: "Crea y distribuye"}
-          - { label: "Mid-slogan", name: "mid", widget: "string", default: "Comunicados de prensa"}
-          - { label: "Outro-slogan", name: "outro", widget: "string", default: "De una manera más fácil, rápida y sencilla."}
+          - { label: "Intro Slogan", name: "intro", widget: "string"}
+          - { label: "Mid Slogan", name: "mid", widget: "string"}
+          - { label: "Outro Slogan", name: "outro", widget: "string"}
+      - label: "HowWeWork"
+        name: "howWeWork"
+        identifier_field: "howWeWork"
+        file: "src/pages/landing/landing.md"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string"}
+          - label: "First Feature",
+            name: "first-Feature",
+            widget: "object"
+            fields: {
+              - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
+            }
+          - label: "Second Feature",
+            name: "second-Feature",
+            widget: "object"
+            fields: {
+              - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
+            }
+          - label: "Third Feature",
+            name: "third-Feature",
+            widget: "object"
+            fields: {
+              - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
+            }
