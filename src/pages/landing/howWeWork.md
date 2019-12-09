@@ -11,7 +11,7 @@ second-Feature:
     opinión de acuerdo a intereses segmentados.
   secondFeatureTitle: Distribución automatizada
 third-Feature:
-  thirdFeatureDescription: Hacemos un reporte de análisis de desempeño del comunicado enviado.
+  thirdFeatureDescription: Hacemos un reporte de análisis de desempeño del comunicado enviado
   thirdFeatureTitle: Seguimiento
 ---
 
