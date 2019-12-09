@@ -30,7 +30,7 @@ collections:
       - label: "Head"
         name: "head"
         identifier_field: "head"
-        file: "src/pages/landing/landing.md"
+        file: "src/pages/landing/head.md"
         fields:
           - { label: "Intro Slogan", name: "intro", widget: "string"}
           - { label: "Mid Slogan", name: "mid", widget: "string"}
