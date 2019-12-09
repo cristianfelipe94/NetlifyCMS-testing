@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo trabajamos?
+title: Cómo trabajamos
 first-Feature:
   firstFeatureDescription: >-
     De manera ágil revisamos sus comunicaciones para la prensa y recomendamos
