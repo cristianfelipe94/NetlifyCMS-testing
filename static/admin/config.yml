@@ -41,24 +41,21 @@ collections:
         file: "src/pages/landing/landing.md"
         fields:
           - { label: "Section Title", name: "title", widget: "string"}
-          - { label: "First Feature",
-            name: "first-Feature",
-            widget: "object",
-            fields: {
+          - label: "First Feature"
+            name: "first-Feature"
+            widget: "object"
+            fields:
               - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
               - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
-            }}
-          - { label: "Second Feature",
-            name: "second-Feature",
-            widget: "object",
-            fields: {
+          - label: "Second Feature"
+            name: "second-Feature"
+            widget: "object"
+            fields:
               - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
               - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
-            }}
-          - { label: "Third Feature",
-            name: "third-Feature",
-            widget: "object",
-            fields: {
+          - label: "Third Feature"
+            name: "third-Feature"
+            widget: "object"
+            fields:
               - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
               - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
-            }}
