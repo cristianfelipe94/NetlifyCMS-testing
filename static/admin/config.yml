@@ -38,7 +38,7 @@ collections:
       - label: "HowWeWork"
         name: "howWeWork"
         identifier_field: "howWeWork"
-        file: "src/pages/landing/landing.md"
+        file: "src/pages/landing/howWeWork.md"
         fields:
           - { label: "Section Title", name: "title", widget: "string"}
           - label: "First Feature"
