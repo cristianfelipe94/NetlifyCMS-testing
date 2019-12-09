@@ -25,9 +25,11 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
   - label: "Landing-Page"
     name: "landing"
+    identifier_field: "landing"
     files:
       - label: "Slogan"
         name: "slogan"
+        identifier_field: "slogan"
         file: "src/pages/landing/landing.md"
         fields:
           - { label: "Intro-slogan", name: "intro", widget: "string", default: "Crea y distribuye"}
