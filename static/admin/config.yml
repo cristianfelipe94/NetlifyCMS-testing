@@ -77,20 +77,31 @@ collections:
                   { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
                 ]
             }
-      - label: "OurMision"
-        name: "ourMision"
-        identifier_field: "ourMision"
-        file: "src/pages/landing/ourMision.md"
+      - label: "PreFooter"
+        name: "preFooter"
+        identifier_field: "preFooter"
+        file: "src/pages/landing/preFooter.md"
         fields:
-          - { label: "Section Title", name: "ourMisionTitle", widget: "string"}
-          - { label: "Section Slogan", name: "ourMisionSlogan", widget: "string"}
-      - label: "OurVision"
-        name: "ourVision"
-        identifier_field: "ourVision"
-        file: "src/pages/landing/ourVision.md"
-        fields:
-          - { label: "Section Title", name: "ourVisionTitle", widget: "string"}
-          - { label: "Section Slogan", name: "ourVisionSlogan", widget: "string"}
+            - {
+              label: "Top section",
+              name: "topSection",
+              widget: "object",
+              fields:
+                [
+                  { label: "Top Section Title", name: "topSectionTitle", widget: "string"},
+                  { label: "Top Section Slogan", name: "topSectionSlogan", widget: "string"}
+                ]
+            }
+            - {
+              label: "Bottom section",
+              name: "bottomSection",
+              widget: "object",
+              fields:
+                [
+                  { label: "Bottom Section Title", name: "bottomSectionTitle", widget: "string"},
+                  { label: "Bottom Section Slogan", name: "bottomSectionSlogan", widget: "string"}
+                ]
+            }
       - label: "Greetings"
         name: "greetings"
         identifier_field: "greetings"
