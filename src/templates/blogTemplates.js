@@ -7,6 +7,7 @@ const postTemplate = ({data}) => {
     <div key={`${frontmatter.title}-${frontmatter.date}`}>
       <h2>{frontmatter.title}</h2>
       <p>{frontmatter.description}</p>
+      <img src={frontmatter.postImage}/>
       <div dangerouslySetInnerHTML={{__html: html}}/>
       <p>Creado por: <span>{frontmatter.author}</span></p>
       <p>Fecha de creación: <span>{frontmatter.date}</span></p>
@@ -23,6 +24,7 @@ export const query = graphql`
         author
         date (formatString: "YYYY-MM-DD")
         description
+        postImage
       }
     }
   }

@@ -10,23 +10,23 @@ const Header = () => {
   const HeaderAnimation = header()
   return (
     <StaticQuery
-      // query= {
-      //   graphql` {
-      //     allFile(filter: {sourceInstanceName: {eq: "landing"} name: {eq: "head"}}) {
-      //       edges {
-      //         node {
-      //           childMarkdownRemark {
-      //             frontmatter {
-      //               intro
-      //               mid
-      //               outro
-      //             }
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // `}
+      query= {
+        graphql` {
+          allFile(filter: {sourceInstanceName: {eq: "landing"} name: {eq: "head"}}) {
+            edges {
+              node {
+                childMarkdownRemark {
+                  frontmatter {
+                    intro
+                    mid
+                    outro
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
 
       render={(data) => {
         const {intro, mid, outro} = data.allFile.edges["0"].node.childMarkdownRemark.frontmatter;

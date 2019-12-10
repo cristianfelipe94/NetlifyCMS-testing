@@ -5,16 +5,18 @@ import { StaticQuery, graphql } from "gatsby"
 const Blog = () => (
   <StaticQuery
     query={
-      graphql`{
-        allMarkdownRemark {
+      graphql` {
+        allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
           edges {
             node {
-              excerpt(pruneLength: 100)
-              frontmatter {
-                date (formatString: "YYYY-MM-DD")
-                title
-                author
-                path
+              childMarkdownRemark {
+                frontmatter {
+                  postImage
+                  date
+                  description
+                  path
+                  title
+                }
               }
             }
           }
@@ -23,17 +25,18 @@ const Blog = () => (
     `}
 
     render={(data) => {
-      const parsedPosts = data.allMarkdownRemark.edges.map((post) => {
-        const {frontmatter, excerpt} = post.node;
+      console.log(data);
+      const parsedPosts = data.allFile.edges.map((post) => {
+        const {frontmatter} = post.node.childMarkdownRemark;
         const cleanPath = frontmatter.title.replace(/\s/g, "-");
         const formatedPath = cleanPath.toLowerCase();
         const path = `/${frontmatter.path}/${formatedPath}`;
         return (
           <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
+            <img src={frontmatter.postImage}/>
             <h2>{frontmatter.title}</h2>
-            <p>{excerpt}</p>
+            <p>{frontmatter.description}</p>
             <p>Esta publicación fue creada: <span>{frontmatter.date}</span></p>
-            <p>Esta publicación fue creada por: <span>{frontmatter.author}</span></p>
           </Link>
         )
       })
