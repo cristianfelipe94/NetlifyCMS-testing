@@ -1,11 +1,12 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import InfoCard from "../../components/info-card/info-card"
 import Comunicado from "../../animations/comunicado/comunicado"
 import Media from "../../animations/media/media"
 import Graphic from "../../animations/graphic/graphic"
 import "./how-we-work.scss"
 
-export default () => {
+const ContainerHWW = () => {
   const cards = [
     {
       title: "Creación y corrección de estilos",
@@ -36,7 +37,7 @@ export default () => {
       Animation: Graphic(),
     },
   ]
-
+  
   return (
     <section className="section__wrapper">
       <h2 className="wrapper__title">¿Cómo trabajamos?</h2>
@@ -44,5 +45,19 @@ export default () => {
         <InfoCard key={i} {...card} />
       ))}
     </section>
-  )
+    // <StaticQuery
+    //   query= {
+
+    //   }
+    //   render= {(data) => {
+    //     <section className="section__wrapper">
+    //       <h2 className="wrapper__title">¿Cómo trabajamos?</h2>
+    //       {cards.map((card, i) => (
+    //         <InfoCard key={i} {...card} />
+    //       ))}
+    //     </section>
+    //   }}
+    // ></StaticQuery>
+  ) 
 }
+export default ContainerHWW
