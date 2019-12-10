@@ -47,21 +47,33 @@ collections:
         file: "src/pages/landing/howWeWork.md"
         fields:
           - { label: "Section Title", name: "sectionTitle", widget: "string"}
-          - label: "First Feature"
-            name: "firstFeature"
-            widget: "object"
+          - {
+              label: "First Feature",
+              name: "firstFeature",
+              widget: "object",
+              fields:
+                [
+                  - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
+                  - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
+                ],
+            }
+          - {
+            label: "Second Feature",
+            name: "secondFeature",
+            widget: "object",
             fields:
-              - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
-              - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
-          - label: "Second Feature"
-            name: "secondFeature"
-            widget: "object"
+              [
+                - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
+                - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
+              ],
+            }
+          - {
+            label: "Third Feature",
+            name: "thirdFeature",
+            widget: "object",
             fields:
-              - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
-              - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
-          - label: "Third Feature"
-            name: "thirdFeature"
-            widget: "object"
-            fields:
-              - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
-              - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
+              [
+                - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
+                - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
+              ],
+            }
