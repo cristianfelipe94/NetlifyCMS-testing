@@ -8,44 +8,53 @@ const OurMission = () => {
 
   return (
     <StaticQuery
-      // query= {
-      //   graphql` {
-      //     allFile(filter: {sourceInstanceName: {eq: "landing"}, name: {eq: "ourMision"}}) {
-      //       edges {
-      //         node {
-      //           childMarkdownRemark {
-      //             frontmatter {
-      //               ourMisionSlogan
-      //               ourMisionTitle
-      //             }
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // `}
+      query= {
+        graphql` {
+          allFile(filter: {sourceInstanceName: {eq: "landing"}, name: {eq: "preFooter"}}) {
+            edges {
+              node {
+                childMarkdownRemark {
+                  frontmatter {
+                    topSection {
+                      topSectionTitle
+                      topSectionSlogan
+                    }
+                    bottomSection {
+                      bottomSectionTitle
+                      bottomSectionSlogan
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
 
       render= {(data) => {
-        // const { ourMisionTitle, ourMisionSlogan } = data.allFile.edges["0"].node.childMarkdownRemark.frontmatter;
+        const { topSection, bottomSection } = data.allFile.edges["0"].node.childMarkdownRemark.frontmatter;
         
         return (
           <section className="our-mission">
             <canvas className="our-mission__canvas"></canvas>
             <div className="section__wrapper">
-            {/* <h2 className="our-mission__title">{ourMisionTitle}</h2> */}
-              {/* <p className="our-mission__paragraph">
-                {ourMisionSlogan}
-              </p> */}
+              <h2 className="our-mission__title">
+                {topSection.topSectionTitle}
+              </h2>
+              <p className="our-mission__paragraph">
+                {topSection.topSectionSlogan}
+              </p>
               <div className="our-mission__svg-group svg-group--spacing">
                 <div className="our-mission__svg light-bulb" />
                 <div className="our-mission__svg light-bulb" />
                 <div className="our-mission__svg paper-plane" />
                 <div className="our-mission__svg planet" />
               </div>
-              <h2 className="our-mission__title">Nuestra Visión</h2>
+              <h2 className="our-mission__title">
+                {bottomSection.bottomSectionTitle}
+              </h2>
               <p className="our-mission__paragraph">
-                Ser la fuente confiable de distribución de contenido en el mercado
-                centroamericano, al enlazar empresas y medios de comunicación.
+                {bottomSection.bottomSectionSlogan}
               </p>
               <div className="our-mission__svg-group">
                 <div className="our-mission__svg check" />
