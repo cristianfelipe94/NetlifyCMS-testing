@@ -77,3 +77,24 @@ collections:
                   { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
                 ]
             }
+      - label: "OurMision"
+        name: "ourMision"
+        identifier_field: "ourMision"
+        file: "src/pages/landing/ourMision.md"
+        fields:
+          - { label: "Section Title", name: "ourMisionTitle", widget: "string"}
+          - { label: "Section Slogan", name: "ourMisionSlogan", widget: "string"}
+      - label: "OurVision"
+        name: "ourVision"
+        identifier_field: "ourVision"
+        file: "src/pages/landing/ourVision.md"
+        fields:
+          - { label: "Section Title", name: "ourVisionTitle", widget: "string"}
+          - { label: "Section Slogan", name: "ourVisionSlogan", widget: "string"}
+      - label: "Greetings"
+        name: "greetings"
+        identifier_field: "greetings"
+        file: "src/pages/landing/greetings.md"
+        fields:
+          - { label: "Section greetings", name: "sectionGreetings", widget: "string"}
+          - { label: "Greetings message", name: "sectionMessage", widget: "string"}
