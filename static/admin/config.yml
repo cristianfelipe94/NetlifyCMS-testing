@@ -23,35 +23,39 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Author", name: "author", widget: "string" }
-  - label: "Head"
-    name: "head"
-    identifier_field: "head"
-    file: "src/pages/landing/head.md"
-    fields:
-      - { label: "Intro Slogan", name: "intro", widget: "string"}
-      - { label: "Mid Slogan", name: "mid", widget: "string"}
-      - { label: "Outro Slogan", name: "outro", widget: "string"}
-  - label: "HowWeWork"
-    name: "howWeWork"
-    identifier_field: "howWeWork"
-    file: "src/pages/landing/howWeWork.md"
-    fields:
-      - { label: "Section Title", name: "sectionTitle", widget: "string"}
-      - label: "First Feature"
-        name: "firstFeature"
-        widget: "object"
+  - label: "Landing-Page"
+    name: "landing"
+    identifier_field: "landing"
+    files:
+      - label: "Head"
+        name: "head"
+        identifier_field: "head"
+        file: "src/pages/landing/head.md"
         fields:
-          - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
-          - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
-      - label: "Second Feature"
-        name: "secondFeature"
-        widget: "object"
+          - { label: "Intro Slogan", name: "intro", widget: "string"}
+          - { label: "Mid Slogan", name: "mid", widget: "string"}
+          - { label: "Outro Slogan", name: "outro", widget: "string"}
+      - label: "HowWeWork"
+        name: "howWeWork"
+        identifier_field: "howWeWork"
+        file: "src/pages/landing/howWeWork.md"
         fields:
-          - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
-          - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
-      - label: "Third Feature"
-        name: "thirdFeature"
-        widget: "object"
-        fields:
-          - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
-          - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
+          - { label: "Section Title", name: "sectionTitle", widget: "string"}
+          - label: "First Feature"
+            name: "firstFeature"
+            widget: "object"
+            fields:
+              - { label: "Feature Title", name: "firstFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "firstFeatureDescription", widget: "string"}
+          - label: "Second Feature"
+            name: "secondFeature"
+            widget: "object"
+            fields:
+              - { label: "Feature Title", name: "secondFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "secondFeatureDescription", widget: "string"}
+          - label: "Third Feature"
+            name: "thirdFeature"
+            widget: "object"
+            fields:
+              - { label: "Feature Title", name: "thirdFeatureTitle", widget: "string"}
+              - { label: "Feature Description", name: "thirdFeatureDescription", widget: "string"}
