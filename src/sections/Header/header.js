@@ -12,7 +12,7 @@ const Header = () => {
     <StaticQuery
       query= {
         graphql` {
-          allFile(filter: {sourceInstanceName: {eq: "landing"}}) {
+          allFile(filter: {sourceInstanceName: {eq: "landing"} name: {eq: "head"}}) {
             edges {
               node {
                 childMarkdownRemark {
@@ -27,7 +27,7 @@ const Header = () => {
           }
         }
       `}
-      
+
       render={(data) => {
         const {intro, mid, outro} = data.allFile.edges["0"].node.childMarkdownRemark.frontmatter;
         return (
