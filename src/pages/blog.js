@@ -31,7 +31,6 @@ const Blog = () => {
         }
       `}
       render={data => {
-        console.log(data);
         const postsList = data.allFile.edges.map(({ node }) => {
           const { fields, frontmatter } = node.childMarkdownRemark;
           const title = frontmatter.title;
