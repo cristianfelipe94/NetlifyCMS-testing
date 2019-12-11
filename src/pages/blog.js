@@ -1,53 +1,83 @@
-import React from "react"
-import { Link } from "gatsby"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import SEO from '../components/seo';
+import Menu from '../components/sections/nav-menu';
+import FooterContact from '../components/sections/footer-contact';
 
-const Blog = () => (
-  <StaticQuery
-    query={
-      graphql` {
-        allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
-          edges {
-            node {
-              childMarkdownRemark {
-                frontmatter {
-                  postImage
-                  date
-                  description
-                  path
-                  title
+import '../styles/blog.scss';
+
+const Blog = () => {
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+            edges {
+              node {
+                childMarkdownRemark {
+                  frontmatter {
+                    title
+                    date(formatString: "MMMM DD, YYYY")
+                    description
+                    postImage
+                  }
+                  fields {
+                    slug
+                  }
                 }
               }
             }
           }
         }
-      }
-    `}
-
-    render={(data) => {
-      console.log(data);
-      const parsedPosts = data.allFile.edges.map((post) => {
-        const {frontmatter} = post.node.childMarkdownRemark;
-        const cleanPath = frontmatter.title.replace(/\s/g, "-");
-        const formatedPath = cleanPath.toLowerCase();
-        const path = `/${frontmatter.path}/${formatedPath}`;
+      `}
+      render={data => {
+        console.log(data);
+        const postsList = data.allFile.edges.map(({ node }) => {
+          const { fields, frontmatter } = node.childMarkdownRemark;
+          const title = frontmatter.title;
+          const path = fields.slug.replace(/\/$/gm, '');
+          return (
+            <div className="section__wrapper" key={path}>
+              <div className="post__wrapper">
+                <Link to={path} className="post__link">
+                  <h4 className="post__title">{title}</h4>
+                </Link>
+                {frontmatter.postImage !== '' && (
+                  <img
+                    src={frontmatter.postImage}
+                    className="post__image"
+                    alt=""
+                  />
+                )}
+                <small className="post__date post__preview">
+                  {frontmatter.date}
+                </small>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: frontmatter.description,
+                  }}
+                  className="post__preview"
+                />
+              </div>
+            </div>
+          );
+        });
         return (
-          <Link to={path} key={`${frontmatter.title}-${frontmatter.date}`}>
-            <img src={frontmatter.postImage}/>
-            <h2>{frontmatter.title}</h2>
-            <p>{frontmatter.description}</p>
-            <p>Esta publicación fue creada: <span>{frontmatter.date}</span></p>
-          </Link>
-        )
-      })
-      return (
-        <div>
-          <h2>Ultimas noticias de Átana.</h2>
-          {parsedPosts}
-        </div>
-      )
-    }}
-  ></StaticQuery>
-)
+          <>
+            <SEO title="Blog" />
+            <div className="menu">
+              <Menu />
+            </div>
+            <div className="section__wrapper">
+              <h2 className="blog__title">Átana blog</h2>
+            </div>
+            {postsList}
+            <FooterContact />
+          </>
+        );
+      }}
+    ></StaticQuery>
+  );
+};
 
-export default Blog
+export default Blog;
