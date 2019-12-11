@@ -42,11 +42,13 @@ const Blog = () => {
                   <h4 className="post__title">{title}</h4>
                 </Link>
                 {frontmatter.postImage !== '' && (
-                  <img
-                    src={frontmatter.postImage}
-                    className="post__image"
-                    alt=""
-                  />
+                  <div className="post__frame">
+                    <img
+                      src={frontmatter.postImage}
+                      className="post__image"
+                      alt=""
+                    />
+                  </div>
                 )}
                 <small className="post__date post__preview">
                   {frontmatter.date}
