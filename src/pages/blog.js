@@ -41,7 +41,7 @@ const Blog = () => {
                 <Link to={path} className="post__link">
                   <h4 className="post__title">{title}</h4>
                 </Link>
-                {frontmatter.postImage !== '' && (
+                {frontmatter.postImage ?
                   <div className="post__frame">
                     <img
                       src={frontmatter.postImage}
@@ -49,7 +49,15 @@ const Blog = () => {
                       alt=""
                     />
                   </div>
-                )}
+                  :
+                  <div className="post__frame">
+                    <img
+                      src={"../defaultpost.svg/"}
+                      className="post__image"
+                      alt=""
+                    />
+                  </div>
+                }
                 <small className="post__date post__preview">
                   {frontmatter.date}
                 </small>
