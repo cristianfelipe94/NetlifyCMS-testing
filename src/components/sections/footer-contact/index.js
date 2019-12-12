@@ -6,7 +6,7 @@ const FooterContact = () => {
     <div className="footer__gradient">
       <div className="contact__social">
         <Link to="/">
-          <img src="atana-logo.svg" alt="Átana" className="footer__logo" />
+          <img src="../atana-logo.svg" alt="Átana" className="footer__logo" />
         </Link>
         <div className="social__container">
           <p>Síguenos en nuestras redes sociales:</p>
