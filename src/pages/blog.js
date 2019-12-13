@@ -52,7 +52,7 @@ const Blog = () => {
                   :
                   <div className="post__frame">
                     <img
-                      src={"../defaultpost.svg/"}
+                      src={"../defaultpost.svg"}
                       className="post__image"
                       alt=""
                     />
