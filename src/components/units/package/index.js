@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Button from '../button';
-import PropTypes from 'prop-types';
 
 import './package.scss';
 import '../button/button.scss';
@@ -27,7 +26,9 @@ const Package = ({ data }) => {
       </div>
       <p className="package__price">{data.price}</p>
       <div
-        className={`package__body ${toggleState ? 'package__body--open' : ''}`}
+        className={`package__body ${
+          toggleState ? 'package__body--open' : ''
+        }`}
       >
         {bundleFeatures(data.features)}
         <Link to="" className="btn btn--secondary package__btn">
@@ -42,16 +43,6 @@ const Package = ({ data }) => {
       </Button>
     </div>
   );
-};
-
-Package.defaultProps = {
-  data: [],
-  bundle: 'basic',
-};
-
-Package.propTypes = {
-  data: PropTypes.object,
-  bundle: PropTypes.string,
 };
 
 export default Package;

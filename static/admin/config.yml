@@ -136,10 +136,10 @@ collections:
         fields:
           [
           { label: "Primer beneficio", name: "firstPackFirstBenefit", widget: "string"},
-          { label: "Segundo beneficio", name: "firstPackSecondBenefit", required: false, widget: "string"},
-          { label: "Tercer beneficio", name: "firstPackThirdBenefit", required: false, widget: "string"},
-          { label: "Cuarto beneficio", name: "firstPackFourthBenefit", required: false, widget: "string"},
-          { label: "Quinto beneficio", name: "firstPackFifthBenefit", required: false, widget: "string"}
+          { label: "Segundo beneficio", name: "firstPackSecondBenefit", required: false, default: "-", widget: "string"},
+          { label: "Tercer beneficio", name: "firstPackThirdBenefit", required: false, default: "-", widget: "string"},
+          { label: "Cuarto beneficio", name: "firstPackFourthBenefit", required: false, default: "-", widget: "string"},
+          { label: "Quinto beneficio", name: "firstPackFifthBenefit", required: false, default: "-", widget: "string"}
           ]
         }
     - label: "Segundo paquete"
@@ -156,10 +156,10 @@ collections:
         fields:
           [
           { label: "Primer beneficio", name: "secondPackFirstBenefit", widget: "string"},
-          { label: "Segundo beneficio", name: "secondPackSecondBenefit", required: false, widget: "string"},
-          { label: "Tercer beneficio", name: "secondPackThirdBenefit", required: false, widget: "string"},
-          { label: "Cuarto beneficio", name: "secondPackFourthBenefit", required: false, widget: "string"},
-          { label: "Quinto beneficio", name: "secondPackFifthBenefit", required: false, widget: "string"}
+          { label: "Segundo beneficio", name: "secondPackSecondBenefit", required: false, default: "-", widget: "string"},
+          { label: "Tercer beneficio", name: "secondPackThirdBenefit", required: false, default: "-", widget: "string"},
+          { label: "Cuarto beneficio", name: "secondPackFourthBenefit", required: false, default: "-", widget: "string"},
+          { label: "Quinto beneficio", name: "secondPackFifthBenefit", required: false, default: "-", widget: "string"}
           ]
         }
     - label: "Tercer paquete"
@@ -176,9 +176,9 @@ collections:
         fields:
           [
           { label: "Primer beneficio", name: "thirdPackFirstBenefit", widget: "string"},
-          { label: "Segundo beneficio", name: "thirdPackSecondBenefit", required: false, widget: "string"},
-          { label: "Tercer beneficio", name: "thirdPackThirdBenefit", required: false, widget: "string"},
-          { label: "Cuarto beneficio", name: "thirdPackFourthBenefit", required: false, widget: "string"},
-          { label: "Quinto beneficio", name: "thirdPackFifthBenefit", required: false, widget: "string"}
+          { label: "Segundo beneficio", name: "thirdPackSecondBenefit", required: false, default: "-", widget: "string"},
+          { label: "Tercer beneficio", name: "thirdPackThirdBenefit", required: false, default: "-", widget: "string"},
+          { label: "Cuarto beneficio", name: "thirdPackFourthBenefit", required: false, default: "-", widget: "string"},
+          { label: "Quinto beneficio", name: "thirdPackFifthBenefit", required: false, default: "-", widget: "string"}
           ]
         }

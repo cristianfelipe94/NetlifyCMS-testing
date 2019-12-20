@@ -6,4 +6,3 @@ secondPackageBenefits:
   secondPackSecondBenefit: Con este paquete se podrán crear comunicados.
   secondPackThirdBenefit: Capacidad de recibir consejos de los mejores comunicadores.
 ---
-
