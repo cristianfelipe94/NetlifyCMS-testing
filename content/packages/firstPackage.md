@@ -2,10 +2,11 @@
 packageTitle: Básico
 packagePrice: $30
 packageBenefits:
-  firstBenefit: '-'
-  secondBenefit: Con este paquete se podrán crear comunicados.
-  thirdBenefit: '-'
-  fourthBenefit: '-'
   fifthBenefit: '-'
+  firstBenefit: Con este paquete se podrán crear comunicados.
+  fourthBenefit: '-'
+  secondBenefit: '-'
+  thirdBenefit: '-'
+packageStyle: basic
 ---
 
