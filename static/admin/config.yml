@@ -119,70 +119,66 @@ collections:
       - { label: "Instagram", name: "socialInstagram", required: false, widget: "string"}
       - { label: "Whatsapp", name: "socialWhatsapp", required: false, widget: "string"}
   - label: "Paquetes y precios"
-      name: "packages"
-      identifier_field: "packages"
-      file: "content/packages/packagesData.md"
+    name: "packages"
+    identifier_field: "packages"
+    files:
+    - label: "Primer paquete"
+      name: "firstPackage"
+      identifier_field: "firstPackage"
+      file: "content/packages/firstPackage.md"
       fields:
-        - label: "Primer paquete"
-          name: "firstPackage"
-          identifier_field: "firstPackage"
-          widget: "object"
-          fields:
-            [
-            { label: "Título del paquete", name: "firstPackageTitle", widget: "string"},
-            { label: "Precio del paquete", name: "firstPackagePrice", widget: "string"},
-            { label: "Beneficios del paquete",
-              name: "firstPackageBenefits",
-              widget: "object",
-              fields:
-                [
-                { label: "Primer beneficio", label: "firstPackFirstBenefit", widget: "string"},
-                { label: "Segundo beneficio", label: "firstPackSecondBenefit", required: false, widget: "string"},
-                { label: "Tercer beneficio", label: "firstPackThirdBenefit", required: false, widget: "string"},
-                { label: "Cuarto beneficio", label: "firstPackFourthBenefit", required: false, widget: "string"},
-                { label: "Quinto beneficio", label: "firstPackFifthBenefit", required: false, widget: "string"}
-                ]
-            }
-            ]
-        - label: "Segundo paquete"
-          name: "secondPackage"
-          identifier_field: "secondPackage"
-          widget: "object"
-          fields:
-            [
-            { label: "Título del paquete", name: "secondPackageTitle", widget: "string"},
-            { label: "Precio del paquete", name: "secondPackagePrice", widget: "string"},
-            { label: "Beneficios del paquete",
-              name: "secondPackageBenefits",
-              widget: "object",
-              fields:
-                [
-                { label: "Primer beneficio", label: "secondPackFirstBenefit", widget: "string"},
-                { label: "Segundo beneficio", label: "secondPackSecondBenefit", required: false, widget: "string"},
-                { label: "Tercer beneficio", label: "secondPackThirdBenefit", required: false, widget: "string"},
-                { label: "Cuarto beneficio", label: "secondPackFourthBenefit", required: false, widget: "string"},
-                { label: "Quinto beneficio", label: "secondPackFifthBenefit", required: false, widget: "string"}
-                ]
-            }
-            ]
-        - label: "Tercer paquete"
-          name: "thirdPackage"
-          identifier_field: "thirdPackage"
-          widget: "object"
-          fields:
-            [
-            { label: "Título del paquete", name: "thirdPackageTitle", widget: "string"},
-            { label: "Precio del paquete", name: "thirdPackagePrice", widget: "string"},
-            { label: "Beneficios del paquete",
-              name: "thirdPackageBenefits",
-              widget: "object",
-              fields:
-                [
-                { label: "Primer beneficio", label: "thirdPackFirstBenefit", widget: "string"},
-                { label: "Segundo beneficio", label: "thirdPackSecondBenefit", required: false, widget: "string"},
-                { label: "Tercer beneficio", label: "thirdPackThirdBenefit", required: false, widget: "string"},
-                { label: "Cuarto beneficio", label: "thirdPackFourthBenefit", required: false, widget: "string"},
-                { label: "Quinto beneficio", label: "thirdPackFifthBenefit", required: false, widget: "string"}
-                ]
-            }
-            ]
+      - { label: "Título del paquete", name: "firstPackageTitle", widget: "string"}
+      - { label: "Precio del paquete", name: "firstPackagePrice", widget: "string"}
+      - {
+        label: "Beneficios del paquete",
+        name: "firstPackageBenefits",
+        widget: "object",
+        fields:
+          [
+          { label: "Primer beneficio", name: "firstPackFirstBenefit", widget: "string"},
+          { label: "Segundo beneficio", name: "firstPackSecondBenefit", required: false, widget: "string"},
+          { label: "Tercer beneficio", name: "firstPackThirdBenefit", required: false, widget: "string"},
+          { label: "Cuarto beneficio", name: "firstPackFourthBenefit", required: false, widget: "string"},
+          { label: "Quinto beneficio", name: "firstPackFifthBenefit", required: false, widget: "string"}
+          ]
+        }
+    - label: "Segundo paquete"
+      name: "secondPackage"
+      identifier_field: "secondPackage"
+      file: "content/packages/secondPackage.md"
+      fields:
+      - { label: "Título del paquete", name: "secondPackageTitle", widget: "string"}
+      - { label: "Precio del paquete", name: "secondPackagePrice", widget: "string"}
+      - {
+        label: "Beneficios del paquete",
+        name: "secondPackageBenefits",
+        widget: "object",
+        fields:
+          [
+          { label: "Primer beneficio", name: "secondPackFirstBenefit", widget: "string"},
+          { label: "Segundo beneficio", name: "secondPackSecondBenefit", required: false, widget: "string"},
+          { label: "Tercer beneficio", name: "secondPackThirdBenefit", required: false, widget: "string"},
+          { label: "Cuarto beneficio", name: "secondPackFourthBenefit", required: false, widget: "string"},
+          { label: "Quinto beneficio", name: "secondPackFifthBenefit", required: false, widget: "string"}
+          ]
+        }
+    - label: "Tercer paquete"
+      name: "thirdPackage"
+      identifier_field: "thirdPackage"
+      file: "content/packages/thirdPackage.md"
+      fields:
+      - { label: "Título del paquete", name: "thirdPackageTitle", widget: "string"}
+      - { label: "Precio del paquete", name: "thirdPackagePrice", widget: "string"}
+      - {
+        label: "Beneficios del paquete",
+        name: "thirdPackageBenefits",
+        widget: "object",
+        fields:
+          [
+          { label: "Primer beneficio", name: "thirdPackFirstBenefit", widget: "string"},
+          { label: "Segundo beneficio", name: "thirdPackSecondBenefit", required: false, widget: "string"},
+          { label: "Tercer beneficio", name: "thirdPackThirdBenefit", required: false, widget: "string"},
+          { label: "Cuarto beneficio", name: "thirdPackFourthBenefit", required: false, widget: "string"},
+          { label: "Quinto beneficio", name: "thirdPackFifthBenefit", required: false, widget: "string"}
+          ]
+        }
