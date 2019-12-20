@@ -1,5 +1,5 @@
 ---
-socialFacebook: facebook
+socialFacebook: '-'
 socialInstagram: instagram
 socialWhatsapp: whats
 ---

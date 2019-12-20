@@ -12,32 +12,29 @@ const Package = ({ data }) => {
     setToggleState(!toggleState);
   };
 
-  console.log("data from package is: ", data)
-
-  const bundleFeatures = (processFeature) => {
+  const bundleFeatures = processFeature => {
+    const featuresArray = [];
     for (let key in processFeature) {
       if (processFeature.hasOwnProperty(key)) {
-        return (
-          <ul className="package__features">
-            {processFeature[key] !== '-' && (
+        {
+          processFeature[key] !== '-' &&
+            featuresArray.push(
               <li key={`${key}:${processFeature}`}>{processFeature[key]}</li>
-            )}
-          </ul>
-        )
+            );
+        }
       }
     }
-  }
+    return <ul className="package__features">{featuresArray}</ul>;
+  };
 
   return (
-    <div className={`package package--${data.packageTitle}`}>
+    <div className={`package package--${data.packageStyle}`}>
       <div className="package__head">
         <p className="package__type">{data.packageTitle}</p>
       </div>
       <p className="package__price">{data.packagePrice}</p>
       <div
-        className={`package__body ${
-          toggleState ? 'package__body--open' : ''
-        }`}
+        className={`package__body ${toggleState ? 'package__body--open' : ''}`}
       >
         {bundleFeatures(data.packageBenefits)}
         <Link to="" className="btn btn--secondary package__btn">

@@ -11,7 +11,7 @@ const Blog = () => {
     <StaticQuery
       query={graphql`
         {
-          allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+          allFile(filter: {sourceInstanceName: {eq: "posts"}}, sort: {fields: childMarkdownRemark___frontmatter___date, order: DESC}) {
             edges {
               node {
                 childMarkdownRemark {

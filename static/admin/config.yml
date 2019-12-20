@@ -28,6 +28,7 @@ collections:
       media_library:
         config:
           multiple: false
+    - { label: "Video del post", name: "postVideo", widget: "string", required: false }
     - { label: "Contenido del post", name: "body", widget: "markdown" }
     - { label: "Autor del post", name: "author", widget: "string" }
   - label: "Landing Contenido"
@@ -115,9 +116,9 @@ collections:
       identifier_field: "social"
       file: "content/landing/social.md"
       fields:
-      - { label: "Facebook", name: "socialFacebook", required: false, widget: "string"}
-      - { label: "Instagram", name: "socialInstagram", required: false, widget: "string"}
-      - { label: "Whatsapp", name: "socialWhatsapp", required: false, widget: "string"}
+      - { label: "Link a Facebook", name: "socialFacebook", required: false, widget: "string"}
+      - { label: "Link a Instagram", name: "socialInstagram", required: false, widget: "string"}
+      - { label: "Link a Whatsapp", name: "socialWhatsapp", required: false, widget: "string"}
   - label: "Paquetes y precios"
     name: "packages"
     identifier_field: "packages"
@@ -130,7 +131,7 @@ collections:
       - { label: "Título del paquete", name: "packageTitle", widget: "string"}
       - { label: "Precio del paquete", name: "packagePrice", widget: "string"}
       - {
-        label: "Beneficios del paquete",
+        label: "Beneficios del paquete, todos los espacios son requeridos. En caso de no necesitar un beneficio, ingresar el signo '-' guion. De esta forma el sistema ignora el contenido del espacio.",
         name: "packageBenefits",
         widget: "object",
         fields:
@@ -151,7 +152,7 @@ collections:
       - { label: "Título del paquete", name: "packageTitle", widget: "string"}
       - { label: "Precio del paquete", name: "packagePrice", widget: "string"}
       - {
-        label: "Beneficios del paquete",
+        label: "Beneficios del paquete, todos los espacios son requeridos. En caso de no necesitar un beneficio, ingresar el signo '-' guion. De esta forma el sistema ignora el contenido del espacio.",
         name: "packageBenefits",
         widget: "object",
         fields:
@@ -172,7 +173,7 @@ collections:
       - { label: "Título del paquete", name: "packageTitle", widget: "string"}
       - { label: "Precio del paquete", name: "packagePrice", widget: "string"}
       - {
-        label: "Beneficios del paquete",
+        label: "Beneficios del paquete, todos los espacios son requeridos. En caso de no necesitar un beneficio, ingresar el signo '-' guion. De esta forma el sistema ignora el contenido del espacio.",
         name: "packageBenefits",
         widget: "object",
         fields:

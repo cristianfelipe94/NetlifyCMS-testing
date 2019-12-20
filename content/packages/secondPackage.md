@@ -9,4 +9,3 @@ packageBenefits:
   thirdBenefit: Con este paquete se podrán crear comunicados.
 packageStyle: standard
 ---
-

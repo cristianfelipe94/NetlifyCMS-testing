@@ -9,13 +9,19 @@ export default () => {
     <StaticQuery
       query={graphql`
         {
-          first: allFile(filter: {sourceInstanceName: {eq: "packages"}, name: {eq: "firstPackage"}}) {
+          first: allFile(
+            filter: {
+              sourceInstanceName: { eq: "packages" }
+              name: { eq: "firstPackage" }
+            }
+          ) {
             edges {
               node {
                 childMarkdownRemark {
                   frontmatter {
                     packageTitle
                     packagePrice
+                    packageStyle
                     packageBenefits {
                       firstBenefit
                       secondBenefit
@@ -28,13 +34,19 @@ export default () => {
               }
             }
           }
-          second: allFile (filter: {sourceInstanceName: {eq: "packages"}, name: {eq: "secondPackage"}}) {
+          second: allFile(
+            filter: {
+              sourceInstanceName: { eq: "packages" }
+              name: { eq: "secondPackage" }
+            }
+          ) {
             edges {
               node {
                 childMarkdownRemark {
                   frontmatter {
                     packageTitle
                     packagePrice
+                    packageStyle
                     packageBenefits {
                       firstBenefit
                       secondBenefit
@@ -47,13 +59,19 @@ export default () => {
               }
             }
           }
-          third: allFile (filter: {sourceInstanceName: {eq: "packages"}, name: {eq: "thirdPackage"}}) {
+          third: allFile(
+            filter: {
+              sourceInstanceName: { eq: "packages" }
+              name: { eq: "thirdPackage" }
+            }
+          ) {
             edges {
               node {
                 childMarkdownRemark {
                   frontmatter {
                     packageTitle
                     packagePrice
+                    packageStyle
                     packageBenefits {
                       firstBenefit
                       secondBenefit
