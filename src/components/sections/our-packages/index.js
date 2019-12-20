@@ -4,8 +4,9 @@ import Package from '../../units/package';
 
 import './our-packages.scss';
 
-// export default () => {
-//   return (
+export default () => {
+  return (
+    <h1>Algo</h1>
 //     <StaticQuery
 //       // query={graphql`
 //       //   {
@@ -81,5 +82,5 @@ import './our-packages.scss';
 //       //   );
 //       // }}
 //     ></StaticQuery>
-//   );
-// };
+  );
+};
