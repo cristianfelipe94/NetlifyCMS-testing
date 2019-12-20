@@ -28,7 +28,6 @@ const FooterContact = () => {
         }
       `}
       render={data => {
-        console.log("Data is: ", data)
         const { frontmatter } = data.allFile.edges[
           '0'
         ].node.childMarkdownRemark;

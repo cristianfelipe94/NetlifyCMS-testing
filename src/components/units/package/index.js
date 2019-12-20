@@ -12,27 +12,36 @@ const Package = ({ data }) => {
     setToggleState(!toggleState);
   };
 
-  const bundleFeatures = processFeature => {
-    const featureItem = processFeature.map((feature, id) => {
-      return <li key={`${data.bundle}-${id}`}>{feature}</li>;
-    });
-    return <ul className="package__features">{featureItem}</ul>;
-  };
+  console.log("data from package is: ", data)
+
+  const bundleFeatures = (processFeature) => {
+    for (let key in processFeature) {
+      if (processFeature.hasOwnProperty(key)) {
+        return (
+          <ul className="package__features">
+            {processFeature[key] !== '-' && (
+              <li key={`${key}:${processFeature}`}>{processFeature[key]}</li>
+            )}
+          </ul>
+        )
+      }
+    }
+  }
 
   return (
-    <div className={`package package--${data.bundle}`}>
+    <div className={`package package--${data.packageTitle}`}>
       <div className="package__head">
-        <p className="package__type">{data.title}</p>
+        <p className="package__type">{data.packageTitle}</p>
       </div>
-      <p className="package__price">{data.price}</p>
+      <p className="package__price">{data.packagePrice}</p>
       <div
         className={`package__body ${
           toggleState ? 'package__body--open' : ''
         }`}
       >
-        {bundleFeatures(data.features)}
+        {bundleFeatures(data.packageBenefits)}
         <Link to="" className="btn btn--secondary package__btn">
-          Obtener {data.title}
+          Obtener {data.packageTitle}
         </Link>
       </div>
       <Button
