@@ -1,11 +1,12 @@
 ---
-secondPackageTitle: Estándar
-secondPackagePrice: $60
-secondPackageBenefits:
-  secondPackFifthBenefit: '-'
-  secondPackFirstBenefit: Con este paquete los comunicados viajan a más comunicadores.
-  secondPackFourthBenefit: '-'
-  secondPackSecondBenefit: Capacidad de recibir consejos de los mejores comunicadores.
-  secondPackThirdBenefit: Con este paquete se podrán crear comunicados.
+packageTitle: Estándar
+packagePrice: $60
+packageBenefits:
+  fifthBenefit: '-'
+  firstBenefit: Con este paquete los comunicados viajan a más comunicadores.
+  fourthBenefit: '-'
+  secondBenefit: Capacidad de recibir consejos de los mejores comunicadores.
+  thirdBenefit: Con este paquete se podrán crear comunicados.
+packageStyle: standard
 ---
 
